@@ -1,4 +1,4 @@
-# First competence: to develop an international network
+# Developing an international network
 
 
 
@@ -70,7 +70,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2018-05-29 11:49:51> Downloaded [71] rows from a total of [71].
+#> 2018-05-29 13:16:16> Downloaded [71] rows from a total of [71].
 ```
 
 ```r

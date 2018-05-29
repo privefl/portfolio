@@ -1,4 +1,4 @@
-# First competence: to develop an international network
+# Developing an international network
 
 ```{r setup, include=FALSE}
 WORDS_TO_IGNORE <- c("Analytics", "eRum", "hackseq", "Recomb")
