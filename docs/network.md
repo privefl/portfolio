@@ -4,7 +4,10 @@
 
 ## Objective
 
-The goal is to develop an international network. There are many advantages of having a large international network, but I won't develop this point. I want to develop an international network in two different communities, that of the language R (in priority) and that of the analysis of genetic data (my subject of thesis). For that, I try to become more and more visible on the international scene.
+The goal is to develop an international network. 
+There are many advantages of having a large international network, but I won't develop this point. 
+I want to develop an international network in two different communities, that of programming language R (in priority) and that of the analysis of genetic data (my subject of thesis). 
+In order to achieve this, I am trying to become more and more visible on the international scene.
 
 ## Using Google Analytics and R
 
@@ -70,7 +73,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2018-05-29 13:16:16> Downloaded [71] rows from a total of [71].
+#> 2018-05-29 13:25:51> Downloaded [71] rows from a total of [71].
 ```
 
 ```r
