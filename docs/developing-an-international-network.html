@@ -32,7 +32,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
+<link rel="prev" href="about.html">
 <link rel="next" href="designing-teaching-materials.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -47,8 +47,6 @@
 
 
 
-<link href="libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="libs/pagedtable-1.1/js/pagedtable.js"></script>
 
 
 <style type="text/css">
@@ -105,7 +103,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="./index.html">Portfolio of Florian Privé</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="about.html"><a href="about.html"><i class="fa fa-check"></i>About</a></li>
 <li class="chapter" data-level="1" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html"><i class="fa fa-check"></i><b>1</b> Developing an international network</a><ul>
 <li class="chapter" data-level="1.1" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#objective"><i class="fa fa-check"></i><b>1.1</b> Objective</a></li>
 <li class="chapter" data-level="1.2" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#using-google-analytics-and-r"><i class="fa fa-check"></i><b>1.2</b> Using Google Analytics and R</a></li>
@@ -115,9 +114,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="1.5" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#attending-conferences"><i class="fa fa-check"></i><b>1.5</b> Attending conferences</a></li>
 <li class="chapter" data-level="1.6" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#a-local-network"><i class="fa fa-check"></i><b>1.6</b> A local network</a></li>
-<li class="chapter" data-level="1.7" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#conclusion"><i class="fa fa-check"></i><b>1.7</b> Conclusion</a></li>
+<li class="chapter" data-level="1.7" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#whats-make-people-be-interested-in-me"><i class="fa fa-check"></i><b>1.7</b> What’s make people be interested in me?</a></li>
+<li class="chapter" data-level="1.8" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#conclusion"><i class="fa fa-check"></i><b>1.8</b> Conclusion</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html"><i class="fa fa-check"></i><b>2</b> Designing teaching materials</a></li>
+<li class="chapter" data-level="2" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html"><i class="fa fa-check"></i><b>2</b> Designing teaching materials</a><ul>
+<li class="chapter" data-level="2.1" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#content"><i class="fa fa-check"></i><b>2.1</b> Content</a></li>
+<li class="chapter" data-level="2.2" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#materials"><i class="fa fa-check"></i><b>2.2</b> Materials</a></li>
+<li class="chapter" data-level="2.3" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#all-chapters"><i class="fa fa-check"></i><b>2.3</b> All chapters</a></li>
+<li class="chapter" data-level="2.4" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#retrospective-thoughts"><i class="fa fa-check"></i><b>2.4</b> Retrospective thoughts</a></li>
+</ul></li>
 <li class="chapter" data-level="3" data-path="developing-an-expertise-in-data-science.html"><a href="developing-an-expertise-in-data-science.html"><i class="fa fa-check"></i><b>3</b> Developing an expertise in Data Science</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -146,21 +151,51 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="using-google-analytics-and-r" class="section level2">
 <h2><span class="header-section-number">1.2</span> Using Google Analytics and R</h2>
-<p>To get a sense of who is reading my blog and check my personal webpage, I decided to follow the flow of people on my blog and website using Google Analytics.</p>
+<p>After the 3rd session of label RES (June 26, 2017), in order to get a sense of who is reading my blog and check my personal webpage, I decided to follow the flow of people on my blog and website using Google Analytics.</p>
 <p>I can access Google Analytics API in R:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(googleAnalyticsR)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
+<span class="kw">library</span>(lubridate)
+<span class="kw">library</span>(googleAnalyticsR)
 <span class="kw">ga_auth</span>(<span class="st">&quot;.httr-oauth&quot;</span>)
-<span class="kw">ga_account_list</span>()</code></pre></div>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["accountId"],"name":[1],"type":["chr"],"align":["left"]},{"label":["accountName"],"name":[2],"type":["chr"],"align":["left"]},{"label":["internalWebPropertyId"],"name":[3],"type":["chr"],"align":["left"]},{"label":["level"],"name":[4],"type":["chr"],"align":["left"]},{"label":["websiteUrl"],"name":[5],"type":["chr"],"align":["left"]},{"label":["webPropertyId"],"name":[6],"type":["chr"],"align":["left"]},{"label":["webPropertyName"],"name":[7],"type":["chr"],"align":["left"]},{"label":["type"],"name":[8],"type":["chr"],"align":["left"]},{"label":["viewId"],"name":[9],"type":["chr"],"align":["left"]},{"label":["viewName"],"name":[10],"type":["chr"],"align":["left"]}],"data":[{"1":"100463316","2":"privefl","3":"172481062","4":"STANDARD","5":"https://privefl.github.io/advr38book/","6":"UA-100463316-5","7":"Advanced R course","8":"WEB","9":"172000044","10":"Toutes les données du site Web"},{"1":"100463316","2":"privefl","3":"147936030","4":"STANDARD","5":"http://r-in-grenoble.github.io/blog/","6":"UA-100463316-2","7":"Blog of the R user group in Grenoble","8":"WEB","9":"152777290","10":"Toutes les données du site Web"},{"1":"100463316","2":"privefl","3":"148988557","4":"STANDARD","5":"http://privefl.github.io/about.html","6":"UA-100463316-3","7":"Mon site web (About)","8":"WEB","9":"153879696","10":"Toutes les données du site Web"},{"1":"100463316","2":"privefl","3":"147313761","4":"STANDARD","5":"https://privefl.github.io/blog","6":"UA-100463316-1","7":"My R blog","8":"WEB","9":"152155542","10":"Toutes les données du site Web"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
+<span class="kw">select</span>(<span class="kw">ga_account_list</span>(), <span class="kw">c</span>(webPropertyName, websiteUrl, viewId)) </code></pre></div>
+<div class="kable-table">
+<table>
+<thead>
+<tr class="header">
+<th align="left">webPropertyName</th>
+<th align="left">websiteUrl</th>
+<th align="left">viewId</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Advanced R course</td>
+<td align="left"><a href="https://privefl.github.io/advr38book/" class="uri">https://privefl.github.io/advr38book/</a></td>
+<td align="left">172000044</td>
+</tr>
+<tr class="even">
+<td align="left">Blog of the R user group in Grenoble</td>
+<td align="left"><a href="http://r-in-grenoble.github.io/blog/" class="uri">http://r-in-grenoble.github.io/blog/</a></td>
+<td align="left">152777290</td>
+</tr>
+<tr class="odd">
+<td align="left">My R blog</td>
+<td align="left"><a href="https://privefl.github.io/blog" class="uri">https://privefl.github.io/blog</a></td>
+<td align="left">152155542</td>
+</tr>
+<tr class="even">
+<td align="left">My website (About)</td>
+<td align="left"><a href="http://privefl.github.io/about.html" class="uri">http://privefl.github.io/about.html</a></td>
+<td align="left">153879696</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="website-and-blog" class="section level2">
 <h2><span class="header-section-number">1.3</span> Website and blog</h2>
 <p>First, just before the beginning of my thesis, I created my personal website and my blog on R. I try to blog fairly regularly about R and my blog is relayed on R-bloggers, a platform that brings together ~850 R bloggers and is read by thousands of people internationally.</p>
-<p>I’m also trying to create R packets and contribute to others via GitHub. GitHub is a good way to make your work visible internationally and facilitate collaborations.</p>
+<p>I’m also trying to create R packages and contribute to others via GitHub. GitHub is a good way to make your work visible internationally and facilitate collaborations.</p>
 </div>
 <div id="twitter-an-important-tool-for-work" class="section level2">
 <h2><span class="header-section-number">1.4</span> Twitter, an important tool for work</h2>
@@ -183,29 +218,25 @@ If you are at the airport today waiting for your ✈️, here's something good t
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>Number of visitors of my course:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
-<span class="kw">library</span>(lubridate)
-myggplot &lt;-<span class="st"> </span><span class="cf">function</span>(..., <span class="dt">coeff =</span> <span class="dv">1</span>) {
-  <span class="kw">ggplot</span>(...) <span class="op">+</span><span class="st"> </span>bigstatsr<span class="op">::</span><span class="kw">theme_bigstatsr</span>(<span class="dt">size.rel =</span> coeff)
-}</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_course &lt;-<span class="st"> </span><span class="kw">google_analytics</span>(
   <span class="dt">viewId =</span> <span class="st">&quot;172000044&quot;</span>,
   <span class="dt">date_range =</span> <span class="kw">ymd</span>(<span class="st">&quot;2018-03-20&quot;</span>, <span class="kw">Sys.Date</span>()),
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2018-05-29 13:25:51&gt; Downloaded [71] rows from a total of [71].</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">myggplot</span>(data_course) <span class="op">+</span><span class="st"> </span>
+<pre><code>#&gt; 2018-05-29 17:24:07&gt; Downloaded [71] rows from a total of [71].</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(data_course) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="kw">ymd</span>(<span class="st">&quot;2018-03-30&quot;</span>, <span class="st">&quot;2018-05-17&quot;</span>), 
              <span class="dt">linetype =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(date, sessions))</code></pre></div>
-<p><img src="network_files/figure-html/unnamed-chunk-3-1.svg" width="70%" style="display: block; margin: auto;" /></p>
-<p>Here, you can clearly see two peaks of visit of <a href="https://privefl.github.io/advr38book/">my advanced R course</a>, one when I blogged about it, which was relayed by R-bloggers, and the other peak when <a href="https://twitter.com/_colinfay">Colin Fay</a> (4600 followers) tweeted about it.</p>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(date, sessions)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span>bigstatsr<span class="op">::</span><span class="kw">theme_bigstatsr</span>()</code></pre></div>
+<p><img src="network_files/figure-html/unnamed-chunk-2-1.svg" width="80%" style="display: block; margin: auto;" /></p>
+<p>Here, you can clearly see two peaks of visit of <a href="https://privefl.github.io/advr38book/">my advanced R course</a>, one when I blogged about it, which was relayed by R-bloggers, and the other peak when <a href="https://twitter.com/_colinfay">Colin Fay</a> (4600+ followers) tweeted about it.</p>
 </div>
 </div>
 <div id="attending-conferences" class="section level2">
 <h2><span class="header-section-number">1.5</span> Attending conferences</h2>
-<p>To develop an international network, it is also very important to attend conferences, which I’m trying to do.</p>
+<p>To develop an international network, it is also very important to attend conferences, which I’m also trying to do.</p>
 <blockquote class="twitter-tweet" data-lang="en" align="center">
 <p lang="en" dir="ltr">
 Use bigstatsr <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> package for matrices larger than 100GB. Great ⚡ talk by <a href="https://twitter.com/privefl?ref_src=twsrc%5Etfw"><span class="citation">(<span class="citeproc-not-found" data-reference-id="privefl"><strong>???</strong></span>)</span></a> at <a href="https://twitter.com/erum2018?ref_src=twsrc%5Etfw"><span class="citation">(<span class="citeproc-not-found" data-reference-id="erum2018"><strong>???</strong></span>)</span></a> <a href="https://twitter.com/hashtag/erum2018?src=hash&amp;ref_src=twsrc%5Etfw">#erum2018</a> <a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a> <a href="https://t.co/magBeDTyVz">pic.twitter.com/magBeDTyVz</a>
@@ -224,11 +255,87 @@ Use bigstatsr <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=t
 </div>
 <div id="a-local-network" class="section level2">
 <h2><span class="header-section-number">1.6</span> A local network</h2>
-<p>Finally, in addition to taking part in an international community, I think it’s very important to take part in a more local community. That’s why I launched the initiative to make a R community in Grenoble, which starts to be active in September 2017 (<a href="https://r-in-grenoble.github.io/" class="uri">https://r-in-grenoble.github.io/</a>).</p>
+<p>Finally, in addition to taking part in an international community, I think it’s very important to take part in a more local community. That’s one reason why I launched the initiative to make an R community in Grenoble, which started to be active in September 2017 (<a href="https://r-in-grenoble.github.io/" class="uri">https://r-in-grenoble.github.io/</a>).</p>
+</div>
+<div id="whats-make-people-be-interested-in-me" class="section level2">
+<h2><span class="header-section-number">1.7</span> What’s make people be interested in me?</h2>
+<p>Is this my blog posts? the conferences I attend? or the paper I wrote?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_about &lt;-<span class="st"> </span><span class="kw">google_analytics</span>(
+  <span class="dt">viewId =</span> <span class="st">&quot;153879696&quot;</span>,
+  <span class="dt">date_range =</span> <span class="kw">ymd</span>(<span class="st">&quot;2017-06-26&quot;</span>, <span class="kw">Sys.Date</span>()),
+  <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
+  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
+)</code></pre></div>
+<pre><code>#&gt; 2018-05-29 17:24:10&gt; Downloaded [338] rows from a total of [338].</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blog_dates &lt;-<span class="st"> </span><span class="kw">list.files</span>(<span class="st">&quot;../blog/_posts/&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">str_sub</span>(<span class="dt">end =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">parse_date</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">print</span>()</code></pre></div>
+<pre><code>#&gt;  [1] &quot;2016-08-19&quot; &quot;2016-08-31&quot; &quot;2016-09-06&quot; &quot;2016-10-07&quot; &quot;2016-10-14&quot; &quot;2016-12-29&quot; &quot;2017-06-03&quot;
+#&gt;  [8] &quot;2017-07-21&quot; &quot;2017-07-27&quot; &quot;2017-09-05&quot; &quot;2017-09-10&quot; &quot;2017-11-16&quot; &quot;2018-03-29&quot; &quot;2018-04-19&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">conf_dates &lt;-<span class="st"> </span><span class="kw">ymd</span>(<span class="st">&quot;2017-07-04&quot;</span>, <span class="st">&quot;2017-07-07&quot;</span>,  <span class="co"># useR!</span>
+                  <span class="st">&quot;2018-04-19&quot;</span>, <span class="st">&quot;2018-04-20&quot;</span>,  <span class="co"># recomb</span>
+                  <span class="st">&quot;2018-05-14&quot;</span>, <span class="st">&quot;2018-05-16&quot;</span>)  <span class="co"># eRum</span>
+
+papers_dates &lt;-<span class="st"> </span><span class="kw">ymd</span>(<span class="st">&quot;2017-09-17&quot;</span>, <span class="st">&quot;2018-05-05&quot;</span>)
+
+data_about <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(sessions)) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">head</span>()</code></pre></div>
+<div class="kable-table">
+<table>
+<thead>
+<tr class="header">
+<th align="left">date</th>
+<th align="right">sessions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2018-03-30</td>
+<td align="right">15</td>
+</tr>
+<tr class="even">
+<td align="left">2018-04-05</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="left">2018-05-27</td>
+<td align="right">9</td>
+</tr>
+<tr class="even">
+<td align="left">2017-11-23</td>
+<td align="right">8</td>
+</tr>
+<tr class="odd">
+<td align="left">2018-04-02</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td align="left">2017-09-12</td>
+<td align="right">7</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">important_dates &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">date =</span> <span class="kw">c</span>(blog_dates[<span class="op">-</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>)], conf_dates, papers_dates))
+
+<span class="kw">ggplot</span>(data_about, <span class="kw">aes</span>(<span class="kw">yday</span>(date), sessions)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">facet_grid</span>(<span class="kw">format</span>(date, <span class="dt">format =</span> <span class="st">&quot;%Y&quot;</span>) <span class="op">~</span><span class="st"> </span>.) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="kw">aes</span>(<span class="dt">xintercept =</span> <span class="kw">yday</span>(date)), <span class="dt">data =</span> important_dates,
+             <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">linetype =</span> <span class="dv">2</span>, <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">2</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">group =</span> <span class="dv">1</span>), <span class="dt">size =</span> <span class="fl">0.8</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span =</span> <span class="fl">0.25</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span>
+<span class="st">  </span>bigstatsr<span class="op">::</span><span class="kw">theme_bigstatsr</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">45</span>, <span class="dt">hjust =</span> <span class="dv">1</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Day number&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Number of sessions on my #About webpage&quot;</span>)</code></pre></div>
+<p><img src="network_files/figure-html/unnamed-chunk-4-1.svg" width="80%" style="display: block; margin: auto;" /></p>
+<p>It seems that blogging about my advanced R course materials is what got we the largest number of people coming to my webpage to learn more about me.</p>
 </div>
 <div id="conclusion" class="section level2">
-<h2><span class="header-section-number">1.7</span> Conclusion</h2>
-<p>Thus, my international network is under development. We can consider that it is a process that takes time, but that the indicators show that I am on the right track.</p>
+<h2><span class="header-section-number">1.8</span> Conclusion</h2>
+<p>Thus, my international network is under development. I’m using my blog, twitter, GitHub, Stack Overflow and conferences to get people to know me and want to collaborate with me.</p>
+<p>We can consider that it is a process that takes time, but that the indicators show that I am on the right track.</p>
 
 </div>
 </div>
@@ -237,7 +344,7 @@ Use bigstatsr <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=t
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="about.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="designing-teaching-materials.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

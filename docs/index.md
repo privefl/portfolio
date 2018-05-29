@@ -13,8 +13,17 @@ url: 'https\://privefl.github.io/portfolio/'
 ---
 
 
+
+# Overview {-}
+
+In this portfolio, I show 3 competences that I'm developing:
+
+1. Developing an international network
+
+1. Designing teaching materials
+
+1. Developing an expertise in Data Science
+
 # About {-}
-
-
 
 [Florian Privé](https://privefl.github.io/) is a PhD student in predictive human genetics, fond of Data Science and an R(cpp) enthusiast. He is also the founder and co-organizer of [the Grenoble R user group](https://r-in-grenoble.github.io/). You can find him on [Twitter](https://twitter.com/privefl) and [GitHub](https://github.com/privefl) as \@privefl and on [Stack Overflow](https://stackoverflow.com/users/6103040/f-priv%c3%a9) as F. Privé.
