@@ -71,7 +71,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2018-05-29 17:24:07> Downloaded [71] rows from a total of [71].
+#> 2018-05-29 17:32:08> Downloaded [71] rows from a total of [71].
 ```
 
 ```r
@@ -125,7 +125,7 @@ data_about <- google_analytics(
 ```
 
 ```
-#> 2018-05-29 17:24:10> Downloaded [338] rows from a total of [338].
+#> 2018-05-29 17:32:11> Downloaded [338] rows from a total of [338].
 ```
 
 ```r
