@@ -71,7 +71,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2018-05-29 17:32:08> Downloaded [71] rows from a total of [71].
+#> 2018-05-29 17:33:49> Downloaded [71] rows from a total of [71].
 ```
 
 ```r
@@ -125,7 +125,7 @@ data_about <- google_analytics(
 ```
 
 ```
-#> 2018-05-29 17:32:11> Downloaded [338] rows from a total of [338].
+#> 2018-05-29 17:33:51> Downloaded [338] rows from a total of [338].
 ```
 
 ```r
@@ -188,6 +188,6 @@ It seems that blogging about my advanced R course materials is what got we the l
 
 Thus, my international network is under development. I'm using my blog, twitter, GitHub, Stack Overflow and conferences to get people to know me and want to collaborate with me.
 
-We can consider that it is a process that takes time, but that the indicators show that I am on the right track.
+We can consider that it is a process that takes time, yet the indicators show that I am on the right track.
 
 
