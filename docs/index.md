@@ -1,14 +1,14 @@
 --- 
 title: "My portfolio"
-subtitle: "Produced trough label RES"
+subtitle: "Produced through label RES"
 author: "Florian Privé"
-date: "2018-05-28"
+date: "2018-05-29"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is my portfolio, produced trough label RES during my thesis."
+description: "This is my portfolio, produced through label RES during my thesis."
 url: 'https\://privefl.github.io/portfolio/'
 ---
 
