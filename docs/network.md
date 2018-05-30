@@ -4,14 +4,27 @@
 
 ## Objective
 
-The goal is to develop an international network. 
-There are many advantages of having a large international network, but I won't develop this point. 
-I want to develop an international network in two different communities, that of programming language R (in priority) and that of the analysis of genetic data (my subject of thesis). 
-In order to achieve this, I am trying to become more and more visible on the international scene.
+There are many advantages of having a large international network. For example,
 
-## Using Google Analytics and R
+- I can get opportunities of work and collaboration,
 
-After the 3rd session of label RES (June 26, 2017), in order to get a sense of who is reading my blog and check my personal webpage, I decided to follow the flow of people on my blog and website using Google Analytics.
+- I can share my open source work to give back to the community,
+
+- I get motivation from people recognizing my work.
+
+I want to develop an international network in two different communities:
+
+- that of programming language R (in priority) and
+ 
+- that of the analysis of genetic data (my subject of thesis). 
+
+In order to achieve this, I am trying to become more and more **visible on the international scene** in many different ways.
+
+## Getting more visible
+
+### Check this using Google Analytics and R
+
+In order to get a sense of who is interested in me and my work, I decided to follow the flow of people on my websites using Google Analytics.
 
 I can access Google Analytics API in R:
 
@@ -36,20 +49,48 @@ My website (About)                     http://privefl.github.io/about.html     1
 </div>
 
 
-## Website and blog
+### Website and blog
 
 First, just before the beginning of my thesis, I created my personal website and my blog on R. I try to blog fairly regularly about R and my blog is relayed on R-bloggers, a platform that brings together ~850 R bloggers and is read by thousands of people internationally. 
 
-I'm also trying to create R packages and contribute to others via GitHub. GitHub is a good way to make your work visible internationally and facilitate collaborations.
+More and more people are coming to by blog:
 
-## Twitter, an important tool for work
 
-I also try to be visible on Twitter, which is used by both communities that are of interest for me. 
-<!-- I'm starting to have followers, even though I have not yet released any official "R" paper or package. I intend to remedy this by going to present a package of community R 1000 people (http://sched.co/Axrw). It will also be an opportunity to meet people and make contacts. -->
+```r
+data_blog <- google_analytics(
+  viewId = "152155542",
+  date_range = ymd("2016-10-01", Sys.Date()),
+  dimensions = c("date"),  # , "pagePath", "hour", "medium"
+  metrics = c("sessions")  # , "pageviews"
+)
+```
 
-### Importance of twitter
+```
+#> 2018-05-30 15:02:48> Downloaded [607] rows from a total of [607].
+```
 
-Two tweets about my R course:
+```r
+# No data from Google Analytics before this date
+ga_begin <- which(data_blog$date == "2017-06-04")
+
+qplot(y = cumsum(data_blog$sessions)) + 
+  geom_vline(xintercept = ga_begin, color = "red") + 
+  bigstatsr::theme_bigstatsr() + 
+  labs(x = "Day of blogging", y = "Cumulative numbers of session on my blog")
+```
+
+<img src="network_files/figure-html/unnamed-chunk-2-1.svg" width="80%" style="display: block; margin: auto;" />
+
+
+### GitHub
+
+GitHub is a platform where you can put your code. GitHub is a good way to make your work visible internationally and facilitate collaborations. On GitHub, I'm trying to create useful R packages and contribute to other packages. 
+
+### Twitter, an important tool for work
+
+I also try to be visible on Twitter, which is used by both communities that are of interest for me to communicate about new stuff.
+
+To convince you, two tweets about my R course:
 
 <blockquote class="twitter-tweet" data-lang="en" align="center"><p lang="en" dir="ltr">Teaching an advanced R course <a href="https://t.co/2pMG2FWcPs">https://t.co/2pMG2FWcPs</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a></p>&mdash; R-bloggers (@Rbloggers) <a href="https://twitter.com/Rbloggers/status/979539984679161857?ref_src=twsrc%5Etfw">30 mars 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -58,7 +99,7 @@ Two tweets about my R course:
 <blockquote class="twitter-tweet" data-lang="en" align="center"><p lang="en" dir="ltr">If you are at the airport today waiting for your ✈️, here&#39;s something good to read: <br>&quot;Advanced <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> Course&quot; by <a href="https://twitter.com/privefl?ref_src=twsrc%5Etfw">@privefl</a>  <a href="https://t.co/JXKBI5lON2">https://t.co/JXKBI5lON2</a></p>&mdash; Colin Fay (@_ColinFay) <a href="https://twitter.com/_ColinFay/status/997073282905067520?ref_src=twsrc%5Etfw">17 mai 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Number of visitors of my course:
+In parallel, let's plot the number of visitors of my course:
 
 
 ```r
@@ -71,7 +112,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2018-05-29 17:33:49> Downloaded [71] rows from a total of [71].
+#> 2018-05-30 15:02:51> Downloaded [72] rows from a total of [72].
 ```
 
 ```r
@@ -82,20 +123,22 @@ ggplot(data_course) +
   bigstatsr::theme_bigstatsr()
 ```
 
-<img src="network_files/figure-html/unnamed-chunk-2-1.svg" width="80%" style="display: block; margin: auto;" />
+<img src="network_files/figure-html/unnamed-chunk-3-1.svg" width="80%" style="display: block; margin: auto;" />
 
-Here, you can clearly see two peaks of visit of [my advanced R course](https://privefl.github.io/advr38book/), one when I blogged about it, which was relayed by R-bloggers, and the other peak when [Colin Fay](https://twitter.com/_colinfay) (4600+ followers) tweeted about it.
+Here, you can clearly see two peaks of visit of [my advanced R course](https://privefl.github.io/advr38book/), one when I blogged about it, which was relayed by [R-bloggers](https://twitter.com/Rbloggers) (59K followers), and the other peak when [Colin Fay](https://twitter.com/_colinfay) (4600+ followers) tweeted about it.
 
-## Attending conferences
+### Attending conferences
 
 To develop an international network, it is also very important to attend conferences, which I'm also trying to do.
 
 <blockquote class="twitter-tweet" data-lang="en" align="center"><p lang="en" dir="ltr">Use bigstatsr <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> package for matrices larger than 100GB. Great ⚡ talk by <a href="https://twitter.com/privefl?ref_src=twsrc%5Etfw">@privefl</a> at <a href="https://twitter.com/erum2018?ref_src=twsrc%5Etfw">@erum2018</a> <a href="https://twitter.com/hashtag/erum2018?src=hash&amp;ref_src=twsrc%5Etfw">#erum2018</a> <a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a> <a href="https://t.co/magBeDTyVz">pic.twitter.com/magBeDTyVz</a></p>&mdash; Peter Laurinec (@petolauri) <a href="https://twitter.com/petolauri/status/996338652820201472?ref_src=twsrc%5Etfw">15 mai 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+This is me on stage in Budapest in May 2018. Before this conference, I had 118 followers on Twitter; after 3 days of conference, I had 158 (+34%).
+
 Conferences I participated in:
 
-- [eRum 2018](https://2018.erum.io/): An R package for statistical tools with big matrices stored on disk. [[Slides]](https://privefl.github.io/eRum-2018/slides.html)
+- [eRum 2018](https://2018.erum.io/): An R package for statistical tools with big matrices stored on disk. [[Recording]](https://youtu.be/w3a1-KLmDM8) [[Slides]](https://privefl.github.io/eRum-2018/slides.html)
 
 - [Recomb-Genetics 2018](http://recomb2018.fr/recomb-genetics/): Predicting complex diseases: performance and robustness. [[Slides]](https://privefl.github.io/thesis-docs/recomb18.html)
 
@@ -106,7 +149,7 @@ Conferences I participated in:
 - [useR!2017](https://user2017.brussels/): The R package bigstatsr:
 Memory- and Computation-Efficient Tools for Big Matrices. [[Recording]](https://t.co/aYt0q8MeXJ)
 
-## A local network
+### A local network
 
 Finally, in addition to taking part in an international community, I think it's very important to take part in a more local community. That's one reason why I launched the initiative to make an R community in Grenoble, which started to be active in September 2017 (https://r-in-grenoble.github.io/).
 
@@ -125,13 +168,14 @@ data_about <- google_analytics(
 ```
 
 ```
-#> 2018-05-29 17:33:51> Downloaded [338] rows from a total of [338].
+#> 2018-05-30 15:02:53> Downloaded [339] rows from a total of [339].
 ```
 
 ```r
 blog_dates <- list.files("../blog/_posts/") %>%
   str_sub(end = 10) %>%
-  parse_date() %>% print()
+  parse_date() %>% 
+  print()
 ```
 
 ```
@@ -180,13 +224,15 @@ ggplot(data_about, aes(yday(date), sessions)) +
   labs(x = "Day number", y = "Number of sessions on my #About webpage")
 ```
 
-<img src="network_files/figure-html/unnamed-chunk-4-1.svg" width="80%" style="display: block; margin: auto;" />
+<img src="network_files/figure-html/unnamed-chunk-5-1.svg" width="80%" style="display: block; margin: auto;" />
 
-It seems that blogging about my advanced R course materials is what got we the largest number of people coming to my webpage to learn more about me. 
+It seems that blogging about my advanced R course materials is what got me the largest number of people coming to my webpage to learn more about me. 
 
 ## Conclusion
 
-Thus, my international network is under development. I'm using my blog, twitter, GitHub, Stack Overflow and conferences to get people to know me and want to collaborate with me.
+Thus, my international network is under development.
+
+I'm using my blog, Twitter, GitHub, Stack Overflow and conferences to get people to know me and want to work with me.
 
 We can consider that it is a process that takes time, yet the indicators show that I am on the right track.
 

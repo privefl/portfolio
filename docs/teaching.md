@@ -78,7 +78,7 @@ sum(data_course_country$sessions)
 ```
 
 ```
-#> [1] 1888
+#> [1] 1895
 ```
 
 ```r

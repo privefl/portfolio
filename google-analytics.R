@@ -31,6 +31,12 @@ useR2017_dates <- ymd("2017-07-04", "2017-07-07")
 
 papers_dates <- ymd("2017-09-17")
 
+ggplot(data_blog, aes(x = seq_along(sessions), y = cumsum(sessions))) +
+  geom_smooth() +
+  geom_point() +
+  bigstatsr::theme_bigstatsr() +
+  labs(x = "Day of blogging", y = "Cumulative number of session on my blog")
+
 
 data_blog %>%
   ggplot(aes(qday(date), sessions)) %>%

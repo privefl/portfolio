@@ -25,7 +25,7 @@
 <meta name="author" content="Florian Privé">
 
 
-<meta name="date" content="2018-05-29">
+<meta name="date" content="2018-05-30">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -109,15 +109,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="1" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html"><i class="fa fa-check"></i><b>1</b> Developing an international network</a><ul>
 <li class="chapter" data-level="1.1" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#objective"><i class="fa fa-check"></i><b>1.1</b> Objective</a></li>
-<li class="chapter" data-level="1.2" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#using-google-analytics-and-r"><i class="fa fa-check"></i><b>1.2</b> Using Google Analytics and R</a></li>
-<li class="chapter" data-level="1.3" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#website-and-blog"><i class="fa fa-check"></i><b>1.3</b> Website and blog</a></li>
-<li class="chapter" data-level="1.4" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#twitter-an-important-tool-for-work"><i class="fa fa-check"></i><b>1.4</b> Twitter, an important tool for work</a><ul>
-<li class="chapter" data-level="1.4.1" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#importance-of-twitter"><i class="fa fa-check"></i><b>1.4.1</b> Importance of twitter</a></li>
+<li class="chapter" data-level="1.2" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#getting-more-visible"><i class="fa fa-check"></i><b>1.2</b> Getting more visible</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#check-this-using-google-analytics-and-r"><i class="fa fa-check"></i><b>1.2.1</b> Check this using Google Analytics and R</a></li>
+<li class="chapter" data-level="1.2.2" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#website-and-blog"><i class="fa fa-check"></i><b>1.2.2</b> Website and blog</a></li>
+<li class="chapter" data-level="1.2.3" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#github"><i class="fa fa-check"></i><b>1.2.3</b> GitHub</a></li>
+<li class="chapter" data-level="1.2.4" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#twitter-an-important-tool-for-work"><i class="fa fa-check"></i><b>1.2.4</b> Twitter, an important tool for work</a></li>
+<li class="chapter" data-level="1.2.5" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#attending-conferences"><i class="fa fa-check"></i><b>1.2.5</b> Attending conferences</a></li>
+<li class="chapter" data-level="1.2.6" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#a-local-network"><i class="fa fa-check"></i><b>1.2.6</b> A local network</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#attending-conferences"><i class="fa fa-check"></i><b>1.5</b> Attending conferences</a></li>
-<li class="chapter" data-level="1.6" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#a-local-network"><i class="fa fa-check"></i><b>1.6</b> A local network</a></li>
-<li class="chapter" data-level="1.7" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#whats-make-people-be-interested-in-me"><i class="fa fa-check"></i><b>1.7</b> What’s make people be interested in me?</a></li>
-<li class="chapter" data-level="1.8" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#conclusion"><i class="fa fa-check"></i><b>1.8</b> Conclusion</a></li>
+<li class="chapter" data-level="1.3" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#whats-make-people-be-interested-in-me"><i class="fa fa-check"></i><b>1.3</b> What’s make people be interested in me?</a></li>
+<li class="chapter" data-level="1.4" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#conclusion"><i class="fa fa-check"></i><b>1.4</b> Conclusion</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html"><i class="fa fa-check"></i><b>2</b> Designing teaching materials</a><ul>
 <li class="chapter" data-level="2.1" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#content"><i class="fa fa-check"></i><b>2.1</b> Content</a></li>
@@ -202,7 +203,7 @@ data_course_country &lt;-<span class="st"> </span><span class="kw">google_analyt
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )
 <span class="kw">sum</span>(data_course_country<span class="op">$</span>sessions)</code></pre></div>
-<pre><code>#&gt; [1] 1888</code></pre>
+<pre><code>#&gt; [1] 1895</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_course_country <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">country2 =</span> <span class="kw">ifelse</span>(sessions <span class="op">&lt;</span><span class="st"> </span><span class="dv">30</span>, <span class="ot">NA</span>, country)) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">reorder</span>(country2, <span class="op">-</span>sessions), sessions)) <span class="op">+</span>
