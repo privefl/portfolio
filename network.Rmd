@@ -18,7 +18,7 @@ There are many advantages of having a large international network. For example,
 
 I want to develop an international network in two different communities:
 
-- that of programming language R (in priority) and
+- that of programming language R (~~in priority~~) and
  
 - that of the analysis of genetic data (my subject of thesis). 
 

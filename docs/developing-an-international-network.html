@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My portfolio</title>
+  <title>1 Developing an international network | My portfolio</title>
   <meta name="description" content="This is my portfolio, produced through label RES during my thesis.">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="My portfolio" />
+  <meta property="og:title" content="1 Developing an international network | My portfolio" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://privefl.github.io/portfolio/" />
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="My portfolio" />
+  <meta name="twitter:title" content="1 Developing an international network | My portfolio" />
   
   <meta name="twitter:description" content="This is my portfolio, produced through label RES during my thesis." />
   
@@ -36,6 +36,7 @@
 <link rel="next" href="designing-teaching-materials.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -158,7 +159,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p>I want to develop an international network in two different communities:</p>
 <ul>
-<li><p>that of programming language R (in priority) and</p></li>
+<li><p>that of programming language R (<del>in priority</del>) and</p></li>
 <li><p>that of the analysis of genetic data (my subject of thesis).</p></li>
 </ul>
 <p>In order to achieve this, I am trying to become more and more <strong>visible on the international scene</strong> in many different ways.</p>
@@ -169,10 +170,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3><span class="header-section-number">1.2.1</span> Check this using Google Analytics and R</h3>
 <p>In order to get a sense of who is interested in me and my work, I decided to follow the flow of people on my websites using Google Analytics.</p>
 <p>I can access Google Analytics API in R:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
-<span class="kw">library</span>(lubridate)
-<span class="kw">library</span>(googleAnalyticsR)
-<span class="kw">ga_auth</span>(<span class="st">&quot;.httr-oauth&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre></div>
+<pre><code>#&gt; Warning: package &#39;tibble&#39; was built under R version 3.5.2</code></pre>
+<pre><code>#&gt; Warning: package &#39;readr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>#&gt; Warning: package &#39;purrr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>#&gt; Warning: package &#39;dplyr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>#&gt; Warning: package &#39;stringr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>#&gt; Warning: package &#39;forcats&#39; was built under R version 3.5.3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lubridate)
+<span class="kw">library</span>(googleAnalyticsR)</code></pre></div>
+<pre><code>#&gt; Warning: package &#39;googleAnalyticsR&#39; was built under R version 3.5.3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ga_auth</span>(<span class="st">&quot;.httr-oauth&quot;</span>)
 <span class="kw">select</span>(<span class="kw">ga_account_list</span>(), <span class="kw">c</span>(webPropertyName, websiteUrl, viewId)) </code></pre></div>
 <div class="kable-table">
 <table>
@@ -204,6 +212,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <td align="left"><a href="http://privefl.github.io/about.html" class="uri">http://privefl.github.io/about.html</a></td>
 <td align="left">153879696</td>
 </tr>
+<tr class="odd">
+<td align="left">Petit Citron</td>
+<td align="left"><a href="https://petit-citron-gw2.netlify.com/" class="uri">https://petit-citron-gw2.netlify.com/</a></td>
+<td align="left">184416898</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -218,7 +231,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2018-05-30 15:02:48&gt; Downloaded [607] rows from a total of [607].</code></pre>
+<pre><code>#&gt; 2019-03-25 22:29:56&gt; Downloaded [906] rows from a total of [906].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># No data from Google Analytics before this date</span>
 ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<span class="op">$</span>date <span class="op">==</span><span class="st"> &quot;2017-06-04&quot;</span>)
 
@@ -257,7 +270,7 @@ If you are at the airport today waiting for your ✈️, here's something good t
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2018-05-30 15:02:51&gt; Downloaded [72] rows from a total of [72].</code></pre>
+<pre><code>#&gt; 2019-03-25 22:29:57&gt; Downloaded [371] rows from a total of [371].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(data_course) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="kw">ymd</span>(<span class="st">&quot;2018-03-30&quot;</span>, <span class="st">&quot;2018-05-17&quot;</span>), 
              <span class="dt">linetype =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span>
@@ -300,13 +313,12 @@ Use bigstatsr <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=t
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2018-05-30 15:02:53&gt; Downloaded [339] rows from a total of [339].</code></pre>
+<pre><code>#&gt; 2019-03-25 22:29:58&gt; Downloaded [638] rows from a total of [638].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blog_dates &lt;-<span class="st"> </span><span class="kw">list.files</span>(<span class="st">&quot;../blog/_posts/&quot;</span>) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">str_sub</span>(<span class="dt">end =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">parse_date</span>() <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">print</span>()</code></pre></div>
-<pre><code>#&gt;  [1] &quot;2016-08-19&quot; &quot;2016-08-31&quot; &quot;2016-09-06&quot; &quot;2016-10-07&quot; &quot;2016-10-14&quot; &quot;2016-12-29&quot; &quot;2017-06-03&quot;
-#&gt;  [8] &quot;2017-07-21&quot; &quot;2017-07-27&quot; &quot;2017-09-05&quot; &quot;2017-09-10&quot; &quot;2017-11-16&quot; &quot;2018-03-29&quot; &quot;2018-04-19&quot;</code></pre>
+<pre><code>#&gt; Date of length 0</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">conf_dates &lt;-<span class="st"> </span><span class="kw">ymd</span>(<span class="st">&quot;2017-07-04&quot;</span>, <span class="st">&quot;2017-07-07&quot;</span>,  <span class="co"># useR!</span>
                   <span class="st">&quot;2018-04-19&quot;</span>, <span class="st">&quot;2018-04-20&quot;</span>,  <span class="co"># recomb</span>
                   <span class="st">&quot;2018-05-14&quot;</span>, <span class="st">&quot;2018-05-16&quot;</span>)  <span class="co"># eRum</span>
@@ -326,28 +338,28 @@ data_about <span class="op">%&gt;%</span>
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">2018-06-12</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="left">2018-06-14</td>
+<td align="right">16</td>
+</tr>
+<tr class="odd">
 <td align="left">2018-03-30</td>
 <td align="right">15</td>
 </tr>
 <tr class="even">
+<td align="left">2018-11-24</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
 <td align="left">2018-04-05</td>
 <td align="right">10</td>
 </tr>
-<tr class="odd">
-<td align="left">2018-05-27</td>
-<td align="right">9</td>
-</tr>
 <tr class="even">
-<td align="left">2017-11-23</td>
-<td align="right">8</td>
-</tr>
-<tr class="odd">
-<td align="left">2018-04-02</td>
-<td align="right">8</td>
-</tr>
-<tr class="even">
-<td align="left">2017-09-12</td>
-<td align="right">7</td>
+<td align="left">2019-01-09</td>
+<td align="right">10</td>
 </tr>
 </tbody>
 </table>
@@ -401,7 +413,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -411,6 +423,10 @@ gitbook.start({
 "size": 2
 },
 "edit": {
+"link": null,
+"text": null
+},
+"history": {
 "link": null,
 "text": null
 },

@@ -14,7 +14,7 @@ There are many advantages of having a large international network. For example,
 
 I want to develop an international network in two different communities:
 
-- that of programming language R (in priority) and
+- that of programming language R (~~in priority~~) and
  
 - that of the analysis of genetic data (my subject of thesis). 
 
@@ -31,8 +31,42 @@ I can access Google Analytics API in R:
 
 ```r
 library(tidyverse)
+```
+
+```
+#> Warning: package 'tibble' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'readr' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'purrr' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'dplyr' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'stringr' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'forcats' was built under R version 3.5.3
+```
+
+```r
 library(lubridate)
 library(googleAnalyticsR)
+```
+
+```
+#> Warning: package 'googleAnalyticsR' was built under R version 3.5.3
+```
+
+```r
 ga_auth(".httr-oauth")
 select(ga_account_list(), c(webPropertyName, websiteUrl, viewId)) 
 ```
@@ -45,6 +79,7 @@ Advanced R course                      https://privefl.github.io/advr38book/   1
 Blog of the R user group in Grenoble   http://r-in-grenoble.github.io/blog/    152777290 
 My R blog                              https://privefl.github.io/blog          152155542 
 My website (About)                     http://privefl.github.io/about.html     153879696 
+Petit Citron                           https://petit-citron-gw2.netlify.com/   184416898 
 
 </div>
 
@@ -66,7 +101,7 @@ data_blog <- google_analytics(
 ```
 
 ```
-#> 2018-05-30 15:02:48> Downloaded [607] rows from a total of [607].
+#> 2019-03-25 22:29:56> Downloaded [906] rows from a total of [906].
 ```
 
 ```r
@@ -112,7 +147,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2018-05-30 15:02:51> Downloaded [72] rows from a total of [72].
+#> 2019-03-25 22:29:57> Downloaded [371] rows from a total of [371].
 ```
 
 ```r
@@ -168,7 +203,7 @@ data_about <- google_analytics(
 ```
 
 ```
-#> 2018-05-30 15:02:53> Downloaded [339] rows from a total of [339].
+#> 2019-03-25 22:29:58> Downloaded [638] rows from a total of [638].
 ```
 
 ```r
@@ -179,8 +214,7 @@ blog_dates <- list.files("../blog/_posts/") %>%
 ```
 
 ```
-#>  [1] "2016-08-19" "2016-08-31" "2016-09-06" "2016-10-07" "2016-10-14" "2016-12-29" "2017-06-03"
-#>  [8] "2017-07-21" "2017-07-27" "2017-09-05" "2017-09-10" "2017-11-16" "2018-03-29" "2018-04-19"
+#> Date of length 0
 ```
 
 ```r
@@ -199,12 +233,12 @@ data_about %>%
 
 date          sessions
 -----------  ---------
+2018-06-12          16
+2018-06-14          16
 2018-03-30          15
+2018-11-24          12
 2018-04-05          10
-2018-05-27           9
-2017-11-23           8
-2018-04-02           8
-2017-09-12           7
+2019-01-09          10
 
 </div>
 
