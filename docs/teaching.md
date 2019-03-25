@@ -62,6 +62,9 @@ Using a [Slack poll](https://simplepoll.rocks/), we agreed to [learn Shiny](http
 
 2. I think using {bookdown}, Git and Slack was a good idea. Indeed, using {bookdown} makes the structure of the course very clear. Moreover, other resources that I use are also in this format so that students are already familiar with it. Then, Git is so useful for everything code related, so even if some students do not set the point of learning Git now, they will thank me later. Finally, Slack was really helpful to do many things such as sharing code to help students and also to make some polls to choose between options.
 
+<img src="poll.png" width="70%" style="display: block; margin: auto;" />
+
+
 3. I feel like I have covered lots of useful things. However, I would have wanted my course to be useful for more people (I had only 10-12 students). In order to get motivated to make these materials, I designed them to be used by other people anywhere in the world.
 
 
@@ -132,13 +135,13 @@ data_course_country %>%
 #> Warning: Removed 73 rows containing missing values (position_stack).
 ```
 
-<img src="teaching_files/figure-html/unnamed-chunk-1-1.svg" width="92%" style="display: block; margin: auto;" />
+<img src="teaching_files/figure-html/unnamed-chunk-2-1.svg" width="92%" style="display: block; margin: auto;" />
 
 ## New year
 
-I'm teaching this again this year (2019).
-I was also teaching at ENSIMAG in the meantime, so that it is good that all materials were ready from last year.
+I'm teaching this course again this year (2019).
+I was also teaching at ENSIMAG in the meantime, so that it is good that all materials were ready from last year as I wouldn't have time to prepare them again.
 
 I have updated some small parts of the course, making sure that all code was still running, replacing exercises that were too hard, etc.
 
-I also decided to plan only 9 sessions in 3 weeks instead of 10 sessions in 5 weeks. Indeed, only one session of packages is sufficient and students from last year reported that 5 weeks was too long for a course.
+I also decided to plan only 9 sessions in 3 weeks instead of 10 sessions in 5 weeks. Indeed, only one session of packages is sufficient and students from last year reported that a course over 5 weeks was too long.
