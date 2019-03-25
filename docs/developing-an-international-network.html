@@ -118,14 +118,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.2.5" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#attending-conferences"><i class="fa fa-check"></i><b>1.2.5</b> Attending conferences</a></li>
 <li class="chapter" data-level="1.2.6" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#a-local-network"><i class="fa fa-check"></i><b>1.2.6</b> A local network</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#whats-make-people-be-interested-in-me"><i class="fa fa-check"></i><b>1.3</b> What’s make people be interested in me?</a></li>
+<li class="chapter" data-level="1.3" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#retrospective-thoughts"><i class="fa fa-check"></i><b>1.3</b> Retrospective thoughts</a></li>
 <li class="chapter" data-level="1.4" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html#conclusion"><i class="fa fa-check"></i><b>1.4</b> Conclusion</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html"><i class="fa fa-check"></i><b>2</b> Designing teaching materials</a><ul>
 <li class="chapter" data-level="2.1" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#content"><i class="fa fa-check"></i><b>2.1</b> Content</a></li>
 <li class="chapter" data-level="2.2" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#materials"><i class="fa fa-check"></i><b>2.2</b> Materials</a></li>
 <li class="chapter" data-level="2.3" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#all-chapters"><i class="fa fa-check"></i><b>2.3</b> All chapters</a></li>
-<li class="chapter" data-level="2.4" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#retrospective-thoughts"><i class="fa fa-check"></i><b>2.4</b> Retrospective thoughts</a></li>
+<li class="chapter" data-level="2.4" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#retrospective-thoughts-1"><i class="fa fa-check"></i><b>2.4</b> Retrospective thoughts</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="developing-an-expertise-in-data-science.html"><a href="developing-an-expertise-in-data-science.html"><i class="fa fa-check"></i><b>3</b> Developing an expertise in Data Science</a></li>
 <li class="divider"></li>
@@ -212,11 +212,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <td align="left"><a href="http://privefl.github.io/about.html" class="uri">http://privefl.github.io/about.html</a></td>
 <td align="left">153879696</td>
 </tr>
-<tr class="odd">
-<td align="left">Petit Citron</td>
-<td align="left"><a href="https://petit-citron-gw2.netlify.com/" class="uri">https://petit-citron-gw2.netlify.com/</a></td>
-<td align="left">184416898</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -231,7 +226,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-25 22:41:20&gt; Downloaded [906] rows from a total of [906].</code></pre>
+<pre><code>#&gt; 2019-03-25 23:23:01&gt; Downloaded [906] rows from a total of [906].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># No data from Google Analytics before this date</span>
 ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<span class="op">$</span>date <span class="op">==</span><span class="st"> &quot;2017-06-04&quot;</span>)
 
@@ -270,7 +265,7 @@ If you are at the airport today waiting for your ✈️, here's something good t
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-25 22:41:22&gt; Downloaded [371] rows from a total of [371].</code></pre>
+<pre><code>#&gt; 2019-03-25 23:23:02&gt; Downloaded [371] rows from a total of [371].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(data_course) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="kw">ymd</span>(<span class="st">&quot;2018-03-30&quot;</span>, <span class="st">&quot;2018-05-17&quot;</span>), 
              <span class="dt">linetype =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span>
@@ -290,7 +285,15 @@ Use bigstatsr <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=t
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>This is me on stage in Budapest in May 2018. Before this conference, I had 118 followers on Twitter; after 3 days of conference, I had 158 (+34%).</p>
-<p>Conferences I participated in:</p>
+<p>I’ve also presented my work elsewhere, such as in Paris and in Denmark.</p>
+<blockquote class="twitter-tweet" data-lang="en" align="center">
+<p lang="en" dir="ltr">
+Back in 🇫🇷. I had a great time in 🇩🇰 meeting <a href="https://twitter.com/bvilhjal?ref_src=twsrc%5Etfw"><span class="citation">(<span class="citeproc-not-found" data-reference-id="bvilhjal"><strong>???</strong></span>)</span></a>, <a href="https://twitter.com/eagerbo?ref_src=twsrc%5Etfw"><span class="citation">(<span class="citeproc-not-found" data-reference-id="eagerbo"><strong>???</strong></span>)</span></a>, <a href="https://twitter.com/jakob_grove?ref_src=twsrc%5Etfw"><span class="citation">(<span class="citeproc-not-found" data-reference-id="jakob_grove"><strong>???</strong></span>)</span></a>, T. Bataillon, <a href="https://twitter.com/dougthespeed?ref_src=twsrc%5Etfw"><span class="citation">(<span class="citeproc-not-found" data-reference-id="dougthespeed"><strong>???</strong></span>)</span></a> and others. Thanks <a href="https://twitter.com/bvilhjal?ref_src=twsrc%5Etfw"><span class="citation">(<span class="citeproc-not-found" data-reference-id="bvilhjal"><strong>???</strong></span>)</span></a> for everything. I might come back later 😉 <a href="https://t.co/gd06D9Ojqp">pic.twitter.com/gd06D9Ojqp</a>
+</p>
+— Florian Privé (<span class="citation">(<span class="citeproc-not-found" data-reference-id="privefl"><strong>???</strong></span>)</span>) <a href="https://twitter.com/privefl/status/1085940170904559616?ref_src=twsrc%5Etfw">17 janvier 2019</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Conferences I presented at:</p>
 <ul>
 <li><p><a href="https://r2018-rennes.sciencesconf.org/">Rencontres R 2018</a>: The R package bigstatsr: Memory- and Computation-Efficient Statistical Tools for Big Matrices <a href="https://privefl.github.io/RR18/bigstatsr.html">[Slides]</a></p></li>
 <li><p><a href="https://2018.erum.io/">eRum 2018</a>: An R package for statistical tools with big matrices stored on disk. <a href="https://youtu.be/w3a1-KLmDM8">[Recording]</a> <a href="https://privefl.github.io/eRum-2018/slides.html">[Slides]</a></p></li>
@@ -303,91 +306,54 @@ Use bigstatsr <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=t
 <div id="a-local-network" class="section level3">
 <h3><span class="header-section-number">1.2.6</span> A local network</h3>
 <p>Finally, in addition to taking part in an international community, I think it’s very important to take part in a more local community. That’s one reason why I launched the initiative to make an R community in Grenoble, which started to be active in September 2017 (<a href="https://r-in-grenoble.github.io/" class="uri">https://r-in-grenoble.github.io/</a>).</p>
+<!-- ## What's make people be interested in me? -->
+<!-- Is this my blog posts? the conferences I attend? or the paper I wrote? -->
+<!-- ```{r} -->
+<!-- data_about <- google_analytics( -->
+<!--   viewId = "153879696", -->
+<!--   date_range = ymd("2017-06-26", Sys.Date()), -->
+<!--   dimensions = c("date"),  # , "pagePath", "hour", "medium" -->
+<!--   metrics = c("sessions")  # , "pageviews" -->
+<!-- ) -->
+<!-- blog_dates <- list.files("../blog/_posts/") %>% -->
+<!--   str_sub(end = 10) %>% -->
+<!--   parse_date() %>%  -->
+<!--   print() -->
+<!-- conf_dates <- ymd("2017-07-04", "2017-07-07",  # useR! -->
+<!--                   "2018-04-19", "2018-04-20",  # recomb -->
+<!--                   "2018-05-14", "2018-05-16")  # eRum -->
+<!-- papers_dates <- ymd("2017-09-17", "2018-05-05") -->
+<!-- data_about %>% -->
+<!--   arrange(desc(sessions)) %>% -->
+<!--   head() -->
+<!-- ``` -->
+<!-- ```{r, out.width="95%"} -->
+<!-- important_dates <- data.frame(date = c(blog_dates[-(1:7)], conf_dates, papers_dates)) -->
+<!-- ggplot(data_about, aes(yday(date), sessions)) + -->
+<!--   facet_grid(format(date, format = "%Y") ~ .) +  -->
+<!--   geom_vline(aes(xintercept = yday(date)), data = important_dates, -->
+<!--              color = "blue", linetype = 2, size = 1) + -->
+<!--   geom_point(size = 2) + -->
+<!--   geom_line(aes(group = 1), size = 0.8) + -->
+<!--   geom_smooth(method = "loess", span = 0.25, color = "red") + -->
+<!--   bigstatsr::theme_bigstatsr() + -->
+<!--   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + -->
+<!--   labs(x = "Day number", y = "Number of sessions on my #About webpage") -->
+<!-- ``` -->
+<!-- It seems that blogging about my advanced R course materials is what got me the largest number of people coming to my webpage to learn more about me.  -->
 </div>
 </div>
-<div id="whats-make-people-be-interested-in-me" class="section level2">
-<h2><span class="header-section-number">1.3</span> What’s make people be interested in me?</h2>
-<p>Is this my blog posts? the conferences I attend? or the paper I wrote?</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_about &lt;-<span class="st"> </span><span class="kw">google_analytics</span>(
-  <span class="dt">viewId =</span> <span class="st">&quot;153879696&quot;</span>,
-  <span class="dt">date_range =</span> <span class="kw">ymd</span>(<span class="st">&quot;2017-06-26&quot;</span>, <span class="kw">Sys.Date</span>()),
-  <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
-  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
-)</code></pre></div>
-<pre><code>#&gt; 2019-03-25 22:41:23&gt; Downloaded [638] rows from a total of [638].</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blog_dates &lt;-<span class="st"> </span><span class="kw">list.files</span>(<span class="st">&quot;../blog/_posts/&quot;</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">str_sub</span>(<span class="dt">end =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">parse_date</span>() <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">print</span>()</code></pre></div>
-<pre><code>#&gt;  [1] &quot;2016-08-19&quot; &quot;2016-08-31&quot; &quot;2016-09-06&quot; &quot;2016-10-07&quot; &quot;2016-10-14&quot; &quot;2016-12-29&quot; &quot;2017-06-03&quot;
-#&gt;  [8] &quot;2017-07-21&quot; &quot;2017-07-27&quot; &quot;2017-09-05&quot; &quot;2017-09-10&quot; &quot;2017-11-16&quot; &quot;2018-03-29&quot; &quot;2018-04-19&quot;
-#&gt; [15] &quot;2018-06-11&quot; &quot;2018-07-02&quot; &quot;2018-07-14&quot; &quot;2018-07-20&quot; &quot;2018-08-30&quot; &quot;2018-10-08&quot; &quot;2018-11-23&quot;
-#&gt; [22] &quot;2018-11-27&quot;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">conf_dates &lt;-<span class="st"> </span><span class="kw">ymd</span>(<span class="st">&quot;2017-07-04&quot;</span>, <span class="st">&quot;2017-07-07&quot;</span>,  <span class="co"># useR!</span>
-                  <span class="st">&quot;2018-04-19&quot;</span>, <span class="st">&quot;2018-04-20&quot;</span>,  <span class="co"># recomb</span>
-                  <span class="st">&quot;2018-05-14&quot;</span>, <span class="st">&quot;2018-05-16&quot;</span>)  <span class="co"># eRum</span>
-
-papers_dates &lt;-<span class="st"> </span><span class="kw">ymd</span>(<span class="st">&quot;2017-09-17&quot;</span>, <span class="st">&quot;2018-05-05&quot;</span>)
-
-data_about <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">arrange</span>(<span class="kw">desc</span>(sessions)) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">head</span>()</code></pre></div>
-<div class="kable-table">
-<table>
-<thead>
-<tr class="header">
-<th align="left">date</th>
-<th align="right">sessions</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">2018-06-12</td>
-<td align="right">16</td>
-</tr>
-<tr class="even">
-<td align="left">2018-06-14</td>
-<td align="right">16</td>
-</tr>
-<tr class="odd">
-<td align="left">2018-03-30</td>
-<td align="right">15</td>
-</tr>
-<tr class="even">
-<td align="left">2018-11-24</td>
-<td align="right">12</td>
-</tr>
-<tr class="odd">
-<td align="left">2018-04-05</td>
-<td align="right">10</td>
-</tr>
-<tr class="even">
-<td align="left">2019-01-09</td>
-<td align="right">10</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">important_dates &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">date =</span> <span class="kw">c</span>(blog_dates[<span class="op">-</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">7</span>)], conf_dates, papers_dates))
-
-<span class="kw">ggplot</span>(data_about, <span class="kw">aes</span>(<span class="kw">yday</span>(date), sessions)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">facet_grid</span>(<span class="kw">format</span>(date, <span class="dt">format =</span> <span class="st">&quot;%Y&quot;</span>) <span class="op">~</span><span class="st"> </span>.) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_vline</span>(<span class="kw">aes</span>(<span class="dt">xintercept =</span> <span class="kw">yday</span>(date)), <span class="dt">data =</span> important_dates,
-             <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">linetype =</span> <span class="dv">2</span>, <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">2</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">group =</span> <span class="dv">1</span>), <span class="dt">size =</span> <span class="fl">0.8</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span =</span> <span class="fl">0.25</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span>
-<span class="st">  </span>bigstatsr<span class="op">::</span><span class="kw">theme_bigstatsr</span>() <span class="op">+</span>
-<span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">45</span>, <span class="dt">hjust =</span> <span class="dv">1</span>)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Day number&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Number of sessions on my #About webpage&quot;</span>)</code></pre></div>
-<p><img src="network_files/figure-html/unnamed-chunk-5-1.svg" width="80%" style="display: block; margin: auto;" /></p>
-<p>It seems that blogging about my advanced R course materials is what got me the largest number of people coming to my webpage to learn more about me.</p>
+<div id="retrospective-thoughts" class="section level2">
+<h2><span class="header-section-number">1.3</span> Retrospective thoughts</h2>
+<p>I’ve invested quite some time in R because I didn’t want to continue in Research at first.</p>
+<p>Now, I’m starting to switch to the “human genetics” community where I will possibly work. Maybe, I should have started earlier as it is hard to enter new research fields (since my thesis supervisors are not directly of this field).</p>
 </div>
 <div id="conclusion" class="section level2">
 <h2><span class="header-section-number">1.4</span> Conclusion</h2>
 <p>Thus, my international network is under development.</p>
-<p>I’m using my blog, Twitter, GitHub, Stack Overflow and conferences to get people to know me and want to work with me.</p>
-<p>We can consider that it is a process that takes time, yet the indicators show that I am on the right track.</p>
+<p>I’m using my blog (2K active users each month), Twitter (300+ followers), GitHub (150+ stars), Stack Overflow (~84K people reached) and conferences to get people to know me and want to work with me.</p>
+<p>We can consider that it is a process that takes time, yet the indicators show that I am on the right track. It has already paid off for my career as I have already received 5 postdoc offers.</p>
+<p>I’m leaving for Denmark in May to meet and work with new people. And I’ll will be lecturer in some <a href="https://www.kcl.ac.uk/ioppn/depts/biostatisticshealthinformatics/teaching/courses/machine-learning">Machine Learning for Health and Bioinformatics workshop</a>.</p>
 
 </div>
 </div>

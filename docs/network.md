@@ -79,7 +79,6 @@ Advanced R course                      https://privefl.github.io/advr38book/   1
 Blog of the R user group in Grenoble   http://r-in-grenoble.github.io/blog/    152777290 
 My R blog                              https://privefl.github.io/blog          152155542 
 My website (About)                     http://privefl.github.io/about.html     153879696 
-Petit Citron                           https://petit-citron-gw2.netlify.com/   184416898 
 
 </div>
 
@@ -101,7 +100,7 @@ data_blog <- google_analytics(
 ```
 
 ```
-#> 2019-03-25 22:41:20> Downloaded [906] rows from a total of [906].
+#> 2019-03-25 23:23:01> Downloaded [906] rows from a total of [906].
 ```
 
 ```r
@@ -147,7 +146,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2019-03-25 22:41:22> Downloaded [371] rows from a total of [371].
+#> 2019-03-25 23:23:02> Downloaded [371] rows from a total of [371].
 ```
 
 ```r
@@ -171,7 +170,14 @@ To develop an international network, it is also very important to attend confere
 
 This is me on stage in Budapest in May 2018. Before this conference, I had 118 followers on Twitter; after 3 days of conference, I had 158 (+34%).
 
-Conferences I participated in:
+I've also presented my work elsewhere, such as in Paris and in Denmark.
+
+<blockquote class="twitter-tweet" data-lang="en" align="center"><p lang="en" dir="ltr">Back in 🇫🇷. I had a great time in 🇩🇰 meeting <a href="https://twitter.com/bvilhjal?ref_src=twsrc%5Etfw">@bvilhjal</a>, <a href="https://twitter.com/eagerbo?ref_src=twsrc%5Etfw">@eagerbo</a>, <a href="https://twitter.com/jakob_grove?ref_src=twsrc%5Etfw">@jakob_grove</a>, T. Bataillon, <a href="https://twitter.com/dougthespeed?ref_src=twsrc%5Etfw">@dougthespeed</a> and others. Thanks <a href="https://twitter.com/bvilhjal?ref_src=twsrc%5Etfw">@bvilhjal</a> for everything. I might come back later 😉 <a href="https://t.co/gd06D9Ojqp">pic.twitter.com/gd06D9Ojqp</a></p>&mdash; Florian Privé (@privefl) <a href="https://twitter.com/privefl/status/1085940170904559616?ref_src=twsrc%5Etfw">17 janvier 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+Conferences I presented at:
 
 - [Rencontres R 2018](https://r2018-rennes.sciencesconf.org/): The R package bigstatsr: Memory- and Computation-Efficient Statistical Tools for Big Matrices [[Slides]](https://privefl.github.io/RR18/bigstatsr.html)
 
@@ -190,89 +196,64 @@ Memory- and Computation-Efficient Tools for Big Matrices. [[Recording]](https://
 
 Finally, in addition to taking part in an international community, I think it's very important to take part in a more local community. That's one reason why I launched the initiative to make an R community in Grenoble, which started to be active in September 2017 (https://r-in-grenoble.github.io/).
 
-## What's make people be interested in me?
+<!-- ## What's make people be interested in me? -->
 
-Is this my blog posts? the conferences I attend? or the paper I wrote?
+<!-- Is this my blog posts? the conferences I attend? or the paper I wrote? -->
 
+<!-- ```{r} -->
+<!-- data_about <- google_analytics( -->
+<!--   viewId = "153879696", -->
+<!--   date_range = ymd("2017-06-26", Sys.Date()), -->
+<!--   dimensions = c("date"),  # , "pagePath", "hour", "medium" -->
+<!--   metrics = c("sessions")  # , "pageviews" -->
+<!-- ) -->
 
-```r
-data_about <- google_analytics(
-  viewId = "153879696",
-  date_range = ymd("2017-06-26", Sys.Date()),
-  dimensions = c("date"),  # , "pagePath", "hour", "medium"
-  metrics = c("sessions")  # , "pageviews"
-)
-```
+<!-- blog_dates <- list.files("../blog/_posts/") %>% -->
+<!--   str_sub(end = 10) %>% -->
+<!--   parse_date() %>%  -->
+<!--   print() -->
 
-```
-#> 2019-03-25 22:41:23> Downloaded [638] rows from a total of [638].
-```
+<!-- conf_dates <- ymd("2017-07-04", "2017-07-07",  # useR! -->
+<!--                   "2018-04-19", "2018-04-20",  # recomb -->
+<!--                   "2018-05-14", "2018-05-16")  # eRum -->
 
-```r
-blog_dates <- list.files("../blog/_posts/") %>%
-  str_sub(end = 10) %>%
-  parse_date() %>% 
-  print()
-```
+<!-- papers_dates <- ymd("2017-09-17", "2018-05-05") -->
 
-```
-#>  [1] "2016-08-19" "2016-08-31" "2016-09-06" "2016-10-07" "2016-10-14" "2016-12-29" "2017-06-03"
-#>  [8] "2017-07-21" "2017-07-27" "2017-09-05" "2017-09-10" "2017-11-16" "2018-03-29" "2018-04-19"
-#> [15] "2018-06-11" "2018-07-02" "2018-07-14" "2018-07-20" "2018-08-30" "2018-10-08" "2018-11-23"
-#> [22] "2018-11-27"
-```
+<!-- data_about %>% -->
+<!--   arrange(desc(sessions)) %>% -->
+<!--   head() -->
+<!-- ``` -->
 
-```r
-conf_dates <- ymd("2017-07-04", "2017-07-07",  # useR!
-                  "2018-04-19", "2018-04-20",  # recomb
-                  "2018-05-14", "2018-05-16")  # eRum
+<!-- ```{r, out.width="95%"} -->
+<!-- important_dates <- data.frame(date = c(blog_dates[-(1:7)], conf_dates, papers_dates)) -->
 
-papers_dates <- ymd("2017-09-17", "2018-05-05")
+<!-- ggplot(data_about, aes(yday(date), sessions)) + -->
+<!--   facet_grid(format(date, format = "%Y") ~ .) +  -->
+<!--   geom_vline(aes(xintercept = yday(date)), data = important_dates, -->
+<!--              color = "blue", linetype = 2, size = 1) + -->
+<!--   geom_point(size = 2) + -->
+<!--   geom_line(aes(group = 1), size = 0.8) + -->
+<!--   geom_smooth(method = "loess", span = 0.25, color = "red") + -->
+<!--   bigstatsr::theme_bigstatsr() + -->
+<!--   theme(axis.text.x = element_text(angle = 45, hjust = 1)) + -->
+<!--   labs(x = "Day number", y = "Number of sessions on my #About webpage") -->
+<!-- ``` -->
 
-data_about %>%
-  arrange(desc(sessions)) %>%
-  head()
-```
+<!-- It seems that blogging about my advanced R course materials is what got me the largest number of people coming to my webpage to learn more about me.  -->
 
-<div class="kable-table">
+## Retrospective thoughts
 
-date          sessions
------------  ---------
-2018-06-12          16
-2018-06-14          16
-2018-03-30          15
-2018-11-24          12
-2018-04-05          10
-2019-01-09          10
+I've invested quite some time in R because I didn't want to continue in Research at first.
 
-</div>
-
-
-```r
-important_dates <- data.frame(date = c(blog_dates[-(1:7)], conf_dates, papers_dates))
-
-ggplot(data_about, aes(yday(date), sessions)) +
-  facet_grid(format(date, format = "%Y") ~ .) + 
-  geom_vline(aes(xintercept = yday(date)), data = important_dates,
-             color = "blue", linetype = 2, size = 1) +
-  geom_point(size = 2) +
-  geom_line(aes(group = 1), size = 0.8) +
-  geom_smooth(method = "loess", span = 0.25, color = "red") +
-  bigstatsr::theme_bigstatsr() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  labs(x = "Day number", y = "Number of sessions on my #About webpage")
-```
-
-<img src="network_files/figure-html/unnamed-chunk-5-1.svg" width="80%" style="display: block; margin: auto;" />
-
-It seems that blogging about my advanced R course materials is what got me the largest number of people coming to my webpage to learn more about me. 
+Now, I'm starting to switch to the "human genetics" community where I will possibly work. Maybe, I should have started earlier as it is hard to enter new research fields (since my thesis supervisors are not directly of this field).
 
 ## Conclusion
 
 Thus, my international network is under development.
 
-I'm using my blog, Twitter, GitHub, Stack Overflow and conferences to get people to know me and want to work with me.
+I'm using my blog (2K active users each month), Twitter (300+ followers), GitHub (150+ stars), Stack Overflow (~84K people reached) and conferences to get people to know me and want to work with me.
 
-We can consider that it is a process that takes time, yet the indicators show that I am on the right track.
+We can consider that it is a process that takes time, yet the indicators show that I am on the right track. 
+It has already paid off for my career as I have already received 5 postdoc offers.
 
-
+I'm leaving for Denmark in May to meet and work with new people. And I'll will be lecturer in some [Machine Learning for Health and Bioinformatics workshop](https://www.kcl.ac.uk/ioppn/depts/biostatisticshealthinformatics/teaching/courses/machine-learning).

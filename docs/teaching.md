@@ -6,7 +6,7 @@ Here, I come back to my first experience teaching an advanced R course (R is a p
 
 ## Content
 
-This course was programmed for 10 sessions (of 3 hours each) for PhD students with some basics in R.
+I planned this course in 10 sessions (of 3 hours each) for PhD students with some basics in R.
 
 I initially wanted to talk about the following subjects:
 
@@ -25,13 +25,15 @@ I basically sticked to this.
 ## Materials
 
 At first, I wanted to do an interactive course using package [{learnr}](https://rstudio.github.io/learnr/) but it would have required way too much work (my thesis supervisor would not have been happy!).
-So, finally I decided to use package [{bookdown}](https://bookdown.org/yihui/bookdown/). Using {bookdown} was really easy, and knowing how to use it now will spare me some time when I will write my thesis manuscript.
+So, I finally decided to use package [{bookdown}](https://bookdown.org/yihui/bookdown/). Using {bookdown} was really easy, and knowing how to use it now will spare me some time when I will write my thesis manuscript (this website is made with {bookdown}).
 
 Materials are available [there](https://privefl.github.io/advr38book/index.html).
 
-I also decided to create an associated package for mainly two reasons:
+I also decided to create an associated package for many reasons:
 
 - to make students install package dependencies that we needed in this course,
+
+- to make data easily available to students,
 
 - to make solutions available for [the chapter on code performance](https://privefl.github.io/advr38book/performance.html).
 
@@ -58,14 +60,48 @@ Using a [Slack poll](https://simplepoll.rocks/), we agreed to [learn Shiny](http
 
 1. At least half of the materials I used is borrowed from others. At first, I felt bad about this because I felt lazy. But it has already taken me a lot of time to prepare these materials, just reinventing the wheel with some new materials that were already out there would have not been good for me or my students.
 
-2. I think using {bookdown}, Git and Slack was a good idea.
+2. I think using {bookdown}, Git and Slack was a good idea. Indeed, using {bookdown} makes the structure of the course very clear. Moreover, other resources that I use are also in this format so that students are already familiar with it. Then, Git is so useful for everything code related, so even if some students do not set the point of learning Git now, they will thank me later. Finally, Slack was really helpful to do many things such as sharing code to help students and also to make some polls to choose between options.
 
-3. I feel like I've covered lots of useful things. However, I would have wanted my course to be useful for more people (I had only ~10 students). In order to get motivated to make these materials, I designed them to be used by other people anywhere in the world.
+3. I feel like I have covered lots of useful things. However, I would have wanted my course to be useful for more people (I had only 10-12 students). In order to get motivated to make these materials, I designed them to be used by other people anywhere in the world.
 
 
 ```r
 library(tidyverse)
+```
+
+```
+#> Warning: package 'tibble' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'readr' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'purrr' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'dplyr' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'stringr' was built under R version 3.5.2
+```
+
+```
+#> Warning: package 'forcats' was built under R version 3.5.3
+```
+
+```r
 library(googleAnalyticsR)
+```
+
+```
+#> Warning: package 'googleAnalyticsR' was built under R version 3.5.3
+```
+
+```r
 ga_auth(".httr-oauth")
 
 data_course_country <- google_analytics(
@@ -78,7 +114,7 @@ sum(data_course_country$sessions)
 ```
 
 ```
-#> [1] 1895
+#> [1] 4014
 ```
 
 ```r
@@ -93,8 +129,16 @@ data_course_country %>%
 ```
 
 ```
-#> Warning: Removed 64 rows containing missing values (position_stack).
+#> Warning: Removed 73 rows containing missing values (position_stack).
 ```
 
 <img src="teaching_files/figure-html/unnamed-chunk-1-1.svg" width="92%" style="display: block; margin: auto;" />
 
+## New year
+
+I'm teaching this again this year (2019).
+I was also teaching at ENSIMAG in the meantime, so that it is good that all materials were ready from last year.
+
+I have updated some small parts of the course, making sure that all code was still running, replacing exercises that were too hard, etc.
+
+I also decided to plan only 9 sessions in 3 weeks instead of 10 sessions in 5 weeks. Indeed, only one session of packages is sufficient and students from last year reported that 5 weeks was too long for a course.
