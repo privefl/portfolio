@@ -1,7 +1,7 @@
 # Developing an international network
 
 ```{r setup, include=FALSE}
-WORDS_TO_IGNORE <- c("Analytics", "eRum", "hackseq", "Recomb")
+WORDS_TO_IGNORE <- c("Analytics", "eRum", "hackseq", "Recomb", "Rencontres")
 source("knitr-options.R")
 source("spelling-check.R")
 ```
@@ -43,7 +43,7 @@ select(ga_account_list(), c(webPropertyName, websiteUrl, viewId))
 
 ### Website and blog
 
-First, just before the beginning of my thesis, I created my personal website and my blog on R. I try to blog fairly regularly about R and my blog is relayed on R-bloggers, a platform that brings together ~850 R bloggers and is read by thousands of people internationally. 
+First, just before the beginning of my thesis, I created my personal website and my blog about R. I try to blog fairly regularly about R and my blog is relayed on R-bloggers, a platform that brings together ~750 R bloggers and is read by thousands of people internationally. 
 
 More and more people are coming to by blog:
 
@@ -111,6 +111,8 @@ To develop an international network, it is also very important to attend confere
 This is me on stage in Budapest in May 2018. Before this conference, I had 118 followers on Twitter; after 3 days of conference, I had 158 (+34%).
 
 Conferences I participated in:
+
+- [Rencontres R 2018](https://r2018-rennes.sciencesconf.org/): The R package bigstatsr: Memory- and Computation-Efficient Statistical Tools for Big Matrices [[Slides]](https://privefl.github.io/RR18/bigstatsr.html)
 
 - [eRum 2018](https://2018.erum.io/): An R package for statistical tools with big matrices stored on disk. [[Recording]](https://youtu.be/w3a1-KLmDM8) [[Slides]](https://privefl.github.io/eRum-2018/slides.html)
 

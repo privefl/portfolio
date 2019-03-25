@@ -86,7 +86,7 @@ Petit Citron                           https://petit-citron-gw2.netlify.com/   1
 
 ### Website and blog
 
-First, just before the beginning of my thesis, I created my personal website and my blog on R. I try to blog fairly regularly about R and my blog is relayed on R-bloggers, a platform that brings together ~850 R bloggers and is read by thousands of people internationally. 
+First, just before the beginning of my thesis, I created my personal website and my blog about R. I try to blog fairly regularly about R and my blog is relayed on R-bloggers, a platform that brings together ~750 R bloggers and is read by thousands of people internationally. 
 
 More and more people are coming to by blog:
 
@@ -101,7 +101,7 @@ data_blog <- google_analytics(
 ```
 
 ```
-#> 2019-03-25 22:29:56> Downloaded [906] rows from a total of [906].
+#> 2019-03-25 22:41:20> Downloaded [906] rows from a total of [906].
 ```
 
 ```r
@@ -147,7 +147,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2019-03-25 22:29:57> Downloaded [371] rows from a total of [371].
+#> 2019-03-25 22:41:22> Downloaded [371] rows from a total of [371].
 ```
 
 ```r
@@ -172,6 +172,8 @@ To develop an international network, it is also very important to attend confere
 This is me on stage in Budapest in May 2018. Before this conference, I had 118 followers on Twitter; after 3 days of conference, I had 158 (+34%).
 
 Conferences I participated in:
+
+- [Rencontres R 2018](https://r2018-rennes.sciencesconf.org/): The R package bigstatsr: Memory- and Computation-Efficient Statistical Tools for Big Matrices [[Slides]](https://privefl.github.io/RR18/bigstatsr.html)
 
 - [eRum 2018](https://2018.erum.io/): An R package for statistical tools with big matrices stored on disk. [[Recording]](https://youtu.be/w3a1-KLmDM8) [[Slides]](https://privefl.github.io/eRum-2018/slides.html)
 
@@ -203,7 +205,7 @@ data_about <- google_analytics(
 ```
 
 ```
-#> 2019-03-25 22:29:58> Downloaded [638] rows from a total of [638].
+#> 2019-03-25 22:41:23> Downloaded [638] rows from a total of [638].
 ```
 
 ```r
@@ -214,7 +216,10 @@ blog_dates <- list.files("../blog/_posts/") %>%
 ```
 
 ```
-#> Date of length 0
+#>  [1] "2016-08-19" "2016-08-31" "2016-09-06" "2016-10-07" "2016-10-14" "2016-12-29" "2017-06-03"
+#>  [8] "2017-07-21" "2017-07-27" "2017-09-05" "2017-09-10" "2017-11-16" "2018-03-29" "2018-04-19"
+#> [15] "2018-06-11" "2018-07-02" "2018-07-14" "2018-07-20" "2018-08-30" "2018-10-08" "2018-11-23"
+#> [22] "2018-11-27"
 ```
 
 ```r

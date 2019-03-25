@@ -223,7 +223,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="website-and-blog" class="section level3">
 <h3><span class="header-section-number">1.2.2</span> Website and blog</h3>
-<p>First, just before the beginning of my thesis, I created my personal website and my blog on R. I try to blog fairly regularly about R and my blog is relayed on R-bloggers, a platform that brings together ~850 R bloggers and is read by thousands of people internationally.</p>
+<p>First, just before the beginning of my thesis, I created my personal website and my blog about R. I try to blog fairly regularly about R and my blog is relayed on R-bloggers, a platform that brings together ~750 R bloggers and is read by thousands of people internationally.</p>
 <p>More and more people are coming to by blog:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_blog &lt;-<span class="st"> </span><span class="kw">google_analytics</span>(
   <span class="dt">viewId =</span> <span class="st">&quot;152155542&quot;</span>,
@@ -231,7 +231,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-25 22:29:56&gt; Downloaded [906] rows from a total of [906].</code></pre>
+<pre><code>#&gt; 2019-03-25 22:41:20&gt; Downloaded [906] rows from a total of [906].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># No data from Google Analytics before this date</span>
 ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<span class="op">$</span>date <span class="op">==</span><span class="st"> &quot;2017-06-04&quot;</span>)
 
@@ -270,7 +270,7 @@ If you are at the airport today waiting for your ✈️, here's something good t
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-25 22:29:57&gt; Downloaded [371] rows from a total of [371].</code></pre>
+<pre><code>#&gt; 2019-03-25 22:41:22&gt; Downloaded [371] rows from a total of [371].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(data_course) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="kw">ymd</span>(<span class="st">&quot;2018-03-30&quot;</span>, <span class="st">&quot;2018-05-17&quot;</span>), 
              <span class="dt">linetype =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span>
@@ -292,6 +292,7 @@ Use bigstatsr <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=t
 <p>This is me on stage in Budapest in May 2018. Before this conference, I had 118 followers on Twitter; after 3 days of conference, I had 158 (+34%).</p>
 <p>Conferences I participated in:</p>
 <ul>
+<li><p><a href="https://r2018-rennes.sciencesconf.org/">Rencontres R 2018</a>: The R package bigstatsr: Memory- and Computation-Efficient Statistical Tools for Big Matrices <a href="https://privefl.github.io/RR18/bigstatsr.html">[Slides]</a></p></li>
 <li><p><a href="https://2018.erum.io/">eRum 2018</a>: An R package for statistical tools with big matrices stored on disk. <a href="https://youtu.be/w3a1-KLmDM8">[Recording]</a> <a href="https://privefl.github.io/eRum-2018/slides.html">[Slides]</a></p></li>
 <li><p><a href="http://recomb2018.fr/recomb-genetics/">Recomb-Genetics 2018</a>: Predicting complex diseases: performance and robustness. <a href="https://privefl.github.io/thesis-docs/recomb18.html">[Slides]</a></p></li>
 <li><p><a href="https://life.univ-grenoble-alpes.fr/life-world/events-news/life-annual-meeting-725690.htm?RH=11210192165071361">LIFE 2018</a>: Predicting complex diseases: performance and robustness. <a href="https://github.com/privefl/paper2-PRS/blob/master/LIFE/pres-f-priv%C3%A9.pdf">[Slides]</a></p></li>
@@ -313,12 +314,15 @@ Use bigstatsr <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=t
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-25 22:29:58&gt; Downloaded [638] rows from a total of [638].</code></pre>
+<pre><code>#&gt; 2019-03-25 22:41:23&gt; Downloaded [638] rows from a total of [638].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">blog_dates &lt;-<span class="st"> </span><span class="kw">list.files</span>(<span class="st">&quot;../blog/_posts/&quot;</span>) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">str_sub</span>(<span class="dt">end =</span> <span class="dv">10</span>) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">parse_date</span>() <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">print</span>()</code></pre></div>
-<pre><code>#&gt; Date of length 0</code></pre>
+<pre><code>#&gt;  [1] &quot;2016-08-19&quot; &quot;2016-08-31&quot; &quot;2016-09-06&quot; &quot;2016-10-07&quot; &quot;2016-10-14&quot; &quot;2016-12-29&quot; &quot;2017-06-03&quot;
+#&gt;  [8] &quot;2017-07-21&quot; &quot;2017-07-27&quot; &quot;2017-09-05&quot; &quot;2017-09-10&quot; &quot;2017-11-16&quot; &quot;2018-03-29&quot; &quot;2018-04-19&quot;
+#&gt; [15] &quot;2018-06-11&quot; &quot;2018-07-02&quot; &quot;2018-07-14&quot; &quot;2018-07-20&quot; &quot;2018-08-30&quot; &quot;2018-10-08&quot; &quot;2018-11-23&quot;
+#&gt; [22] &quot;2018-11-27&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">conf_dates &lt;-<span class="st"> </span><span class="kw">ymd</span>(<span class="st">&quot;2017-07-04&quot;</span>, <span class="st">&quot;2017-07-07&quot;</span>,  <span class="co"># useR!</span>
                   <span class="st">&quot;2018-04-19&quot;</span>, <span class="st">&quot;2018-04-20&quot;</span>,  <span class="co"># recomb</span>
                   <span class="st">&quot;2018-05-14&quot;</span>, <span class="st">&quot;2018-05-16&quot;</span>)  <span class="co"># eRum</span>
