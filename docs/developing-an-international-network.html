@@ -25,7 +25,7 @@
 <meta name="author" content="Florian Privé">
 
 
-<meta name="date" content="2018-05-30">
+<meta name="date" content="2019-03-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -172,17 +172,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h3><span class="header-section-number">1.2.1</span> Check this using Google Analytics and R</h3>
 <p>In order to get a sense of who is interested in me and my work, I decided to follow the flow of people on my websites using Google Analytics.</p>
 <p>I can access Google Analytics API in R:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre></div>
-<pre><code>#&gt; Warning: package &#39;tibble&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;readr&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;purrr&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;dplyr&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;stringr&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;forcats&#39; was built under R version 3.5.3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(lubridate)
-<span class="kw">library</span>(googleAnalyticsR)</code></pre></div>
-<pre><code>#&gt; Warning: package &#39;googleAnalyticsR&#39; was built under R version 3.5.3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ga_auth</span>(<span class="st">&quot;.httr-oauth&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
+<span class="kw">library</span>(lubridate)
+<span class="kw">library</span>(googleAnalyticsR)
+<span class="kw">ga_auth</span>(<span class="st">&quot;.httr-oauth&quot;</span>)
 <span class="kw">select</span>(<span class="kw">ga_account_list</span>(), <span class="kw">c</span>(webPropertyName, websiteUrl, viewId)) </code></pre></div>
 <div class="kable-table">
 <table>
@@ -228,7 +221,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-26 08:37:09&gt; Downloaded [907] rows from a total of [907].</code></pre>
+<pre><code>#&gt; 2019-03-26 09:21:43&gt; Downloaded [907] rows from a total of [907].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># No data from Google Analytics before this date</span>
 ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<span class="op">$</span>date <span class="op">==</span><span class="st"> &quot;2017-06-04&quot;</span>)
 
@@ -267,7 +260,7 @@ If you are at the airport today waiting for your ✈️, here's something good t
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-26 08:37:11&gt; Downloaded [372] rows from a total of [372].</code></pre>
+<pre><code>#&gt; 2019-03-26 09:21:46&gt; Downloaded [372] rows from a total of [372].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(data_course) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="kw">ymd</span>(<span class="st">&quot;2018-03-30&quot;</span>, <span class="st">&quot;2018-05-17&quot;</span>), 
              <span class="dt">linetype =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span>

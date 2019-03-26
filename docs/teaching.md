@@ -72,41 +72,7 @@ Using a [Slack poll](https://simplepoll.rocks/), we agreed to [learn Shiny](http
 
 ```r
 library(tidyverse)
-```
-
-```
-#> Warning: package 'tibble' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'readr' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'purrr' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'dplyr' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'stringr' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'forcats' was built under R version 3.5.3
-```
-
-```r
 library(googleAnalyticsR)
-```
-
-```
-#> Warning: package 'googleAnalyticsR' was built under R version 3.5.3
-```
-
-```r
 ga_auth(".httr-oauth")
 
 data_course_country <- google_analytics(

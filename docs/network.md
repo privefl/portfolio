@@ -31,42 +31,8 @@ I can access Google Analytics API in R:
 
 ```r
 library(tidyverse)
-```
-
-```
-#> Warning: package 'tibble' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'readr' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'purrr' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'dplyr' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'stringr' was built under R version 3.5.2
-```
-
-```
-#> Warning: package 'forcats' was built under R version 3.5.3
-```
-
-```r
 library(lubridate)
 library(googleAnalyticsR)
-```
-
-```
-#> Warning: package 'googleAnalyticsR' was built under R version 3.5.3
-```
-
-```r
 ga_auth(".httr-oauth")
 select(ga_account_list(), c(webPropertyName, websiteUrl, viewId)) 
 ```
@@ -100,7 +66,7 @@ data_blog <- google_analytics(
 ```
 
 ```
-#> 2019-03-26 08:37:09> Downloaded [907] rows from a total of [907].
+#> 2019-03-26 09:21:43> Downloaded [907] rows from a total of [907].
 ```
 
 ```r
@@ -146,7 +112,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2019-03-26 08:37:11> Downloaded [372] rows from a total of [372].
+#> 2019-03-26 09:21:46> Downloaded [372] rows from a total of [372].
 ```
 
 ```r

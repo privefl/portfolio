@@ -25,7 +25,7 @@
 <meta name="author" content="Florian Privé">
 
 
-<meta name="date" content="2018-05-30">
+<meta name="date" content="2019-03-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -200,16 +200,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ol start="3" style="list-style-type: decimal">
 <li>I feel like I have covered lots of useful things. However, I would have wanted my course to be useful for more people (I had only 10-12 students). So, in order to get motivated to make these materials, I designed them to be used by other people anywhere in the world.</li>
 </ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre></div>
-<pre><code>#&gt; Warning: package &#39;tibble&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;readr&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;purrr&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;dplyr&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;stringr&#39; was built under R version 3.5.2</code></pre>
-<pre><code>#&gt; Warning: package &#39;forcats&#39; was built under R version 3.5.3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(googleAnalyticsR)</code></pre></div>
-<pre><code>#&gt; Warning: package &#39;googleAnalyticsR&#39; was built under R version 3.5.3</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ga_auth</span>(<span class="st">&quot;.httr-oauth&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
+<span class="kw">library</span>(googleAnalyticsR)
+<span class="kw">ga_auth</span>(<span class="st">&quot;.httr-oauth&quot;</span>)
 
 data_course_country &lt;-<span class="st"> </span><span class="kw">google_analytics</span>(
   <span class="dt">viewId =</span> <span class="st">&quot;172000044&quot;</span>,

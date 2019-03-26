@@ -2,7 +2,7 @@
 title: "My portfolio"
 subtitle: "Produced through label RES"
 author: "Florian Privé"
-date: "2018-05-30"
+date: "2019-03-26"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -25,6 +25,8 @@ In this portfolio, I show 3 competences that I'm developing:
 1. Designing teaching materials
 
 1. Developing an expertise in Data Science
+
+The goal is to have skills whatever I want to do next, that is to say leaving academia or staying in Research. 
 
 ## About {-}
 
