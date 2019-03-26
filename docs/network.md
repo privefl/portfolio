@@ -66,7 +66,7 @@ data_blog <- google_analytics(
 ```
 
 ```
-#> 2019-03-26 09:21:43> Downloaded [907] rows from a total of [907].
+#> 2019-03-26 09:39:18> Downloaded [907] rows from a total of [907].
 ```
 
 ```r
@@ -112,7 +112,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2019-03-26 09:21:46> Downloaded [372] rows from a total of [372].
+#> 2019-03-26 09:39:20> Downloaded [372] rows from a total of [372].
 ```
 
 ```r
@@ -125,7 +125,7 @@ ggplot(data_course) +
 
 <img src="network_files/figure-html/unnamed-chunk-3-1.svg" width="80%" style="display: block; margin: auto;" />
 
-Here, you can clearly see two peaks of visit of [my advanced R course](https://privefl.github.io/advr38book/), one when I blogged about it, which was relayed by [R-bloggers](https://twitter.com/Rbloggers) (59K followers), and the other peak when [Colin Fay](https://twitter.com/_colinfay) (4600+ followers) tweeted about it.
+Here, you can clearly see two peaks of visit of [my advanced R course](https://privefl.github.io/advr38book/), one when I blogged about it, which was relayed by [R-bloggers](https://twitter.com/Rbloggers) (59K followers at the time), and the other peak when [Colin Fay](https://twitter.com/_colinfay) (4600+ followers) tweeted about it.
 
 ### Attending conferences
 
@@ -161,6 +161,8 @@ Memory- and Computation-Efficient Tools for Big Matrices. [[Recording]](https://
 ### A local network
 
 Finally, in addition to taking part in an international community, I think it's very important to take part in a more local community. That's one reason why I launched the initiative to make an R community in Grenoble, which started to be active in September 2017 (https://r-in-grenoble.github.io/).
+
+I'm also an active member in the French community; we have been [gathering on Slack](https://join.slack.com/t/r-grrr/shared_invite/enQtMzI4MzgwNTc4OTAxLWZlOGZiZTBiMWU0NDQ3OTYzOGE1YThiODgwZWNhNWEyYjI4ZDJiNmNhY2YyYWI5YzFiOTFkNDYxYzkwODUwNWM).
 
 <!-- ## What's make people be interested in me? -->
 
@@ -222,4 +224,4 @@ I'm using my blog (2K active users each month), Twitter (300+ followers), GitHub
 We can consider that it is a process that takes time, yet the indicators show that I am on the right track. 
 It has already paid off for my career as I have already received 5 postdoc offers.
 
-I'm leaving for Denmark in May to meet and work with new people. And I'll will be lecturer in some [Machine Learning for Health and Bioinformatics workshop](https://www.kcl.ac.uk/ioppn/depts/biostatisticshealthinformatics/teaching/courses/machine-learning).
+I'm leaving for Denmark in May to meet and work with new people. I will also be lecturer in some [Machine Learning for Health and Bioinformatics workshop](https://www.kcl.ac.uk/ioppn/depts/biostatisticshealthinformatics/teaching/courses/machine-learning) at King's College London.
