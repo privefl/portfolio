@@ -66,7 +66,7 @@ data_blog <- google_analytics(
 ```
 
 ```
-#> 2019-03-26 09:39:18> Downloaded [907] rows from a total of [907].
+#> 2019-03-26 10:37:50> Downloaded [907] rows from a total of [907].
 ```
 
 ```r
@@ -112,7 +112,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2019-03-26 09:39:20> Downloaded [372] rows from a total of [372].
+#> 2019-03-26 10:37:52> Downloaded [372] rows from a total of [372].
 ```
 
 ```r
@@ -213,7 +213,7 @@ I'm also an active member in the French community; we have been [gathering on Sl
 
 I've invested quite some time in R because I didn't want to continue in Research at first.
 
-Now, I'm starting to switch to the "human genetics" community where I will possibly work. Maybe, I should have started earlier as it is hard to enter new research fields (since my thesis supervisors are not directly of this field).
+Now, I'm starting to switch to the "human genetics" community where I will possibly work. Maybe, I should have started earlier as it is hard to enter new research fields (since my thesis supervisors are not directly from this field).
 
 ## Conclusion
 

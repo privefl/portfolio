@@ -210,10 +210,10 @@ data_course_country &lt;-<span class="st"> </span><span class="kw">google_analyt
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )
 <span class="kw">sum</span>(data_course_country<span class="op">$</span>sessions)</code></pre></div>
-<pre><code>#&gt; [1] 4015</code></pre>
+<pre><code>#&gt; [1] 4016</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_course_country <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">country2 =</span> <span class="kw">ifelse</span>(sessions <span class="op">&lt;</span><span class="st"> </span><span class="dv">30</span>, <span class="ot">NA</span>, country)) <span class="op">%&gt;%</span>
-<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">reorder</span>(country2, <span class="op">-</span>sessions), sessions)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">reorder</span>(country2, <span class="kw">desc</span>(sessions)), sessions)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_col</span>() <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">scale_x_discrete</span>(<span class="dt">na.translate =</span> <span class="ot">FALSE</span>) <span class="op">+</span>
 <span class="st">  </span>bigstatsr<span class="op">::</span><span class="kw">theme_bigstatsr</span>() <span class="op">+</span>
@@ -225,7 +225,7 @@ data_course_country &lt;-<span class="st"> </span><span class="kw">google_analyt
 </div>
 <div id="new-year" class="section level2">
 <h2><span class="header-section-number">2.5</span> New year</h2>
-<p>I’m teaching this course again this year (2019). I was also teaching at ENSIMAG in the meantime, so that it is good that all materials were ready from last year since I would not have time to prepare them again.</p>
+<p>I’m teaching this course again this year (2019). I was also teaching at ENSIMAG in the meantime, so that it is good that all materials were ready from last year since I would not have had time to prepare them again.</p>
 <p>I have updated some small parts of the course, making sure that all code was still running, replacing exercises that were too hard, etc.</p>
 <p>I also decided to plan only 9 sessions over 3 weeks instead of 10 sessions over 5 weeks as we did last year. Indeed, only one session about packages is sufficient and <strong>students from last year reported that a course over 5 weeks was too long</strong>.</p>
 </div>

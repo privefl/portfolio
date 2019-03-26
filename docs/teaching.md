@@ -84,13 +84,13 @@ sum(data_course_country$sessions)
 ```
 
 ```
-#> [1] 4015
+#> [1] 4016
 ```
 
 ```r
 data_course_country %>%
   mutate(country2 = ifelse(sessions < 30, NA, country)) %>%
-  ggplot(aes(reorder(country2, -sessions), sessions)) +
+  ggplot(aes(reorder(country2, desc(sessions)), sessions)) +
   geom_col() + 
   scale_x_discrete(na.translate = FALSE) +
   bigstatsr::theme_bigstatsr() +
@@ -108,7 +108,7 @@ data_course_country %>%
 ## New year
 
 I'm teaching this course again this year (2019).
-I was also teaching at ENSIMAG in the meantime, so that it is good that all materials were ready from last year since I would not have time to prepare them again.
+I was also teaching at ENSIMAG in the meantime, so that it is good that all materials were ready from last year since I would not have had time to prepare them again.
 
 I have updated some small parts of the course, making sure that all code was still running, replacing exercises that were too hard, etc.
 
