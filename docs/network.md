@@ -16,7 +16,7 @@ I want to develop an international network in two different communities:
 
 - that of programming language R (~~in priority~~) and
  
-- that of the analysis of genetic data (my subject of thesis). 
+- that of the analysis of genetic data ("Predictive Human Genetics" -- my thesis subject). 
 
 In order to achieve this, I am trying to become more and more **visible on the international scene** in many different ways.
 
@@ -100,7 +100,7 @@ data_blog <- google_analytics(
 ```
 
 ```
-#> 2019-03-25 23:23:01> Downloaded [906] rows from a total of [906].
+#> 2019-03-26 08:37:09> Downloaded [907] rows from a total of [907].
 ```
 
 ```r
@@ -146,7 +146,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2019-03-25 23:23:02> Downloaded [371] rows from a total of [371].
+#> 2019-03-26 08:37:11> Downloaded [372] rows from a total of [372].
 ```
 
 ```r

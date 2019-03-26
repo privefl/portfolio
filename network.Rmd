@@ -20,7 +20,7 @@ I want to develop an international network in two different communities:
 
 - that of programming language R (~~in priority~~) and
  
-- that of the analysis of genetic data (my subject of thesis). 
+- that of the analysis of genetic data ("Predictive Human Genetics" -- my thesis subject). 
 
 In order to achieve this, I am trying to become more and more **visible on the international scene** in many different ways.
 
