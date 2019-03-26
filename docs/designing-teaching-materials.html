@@ -151,7 +151,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="designing-teaching-materials" class="section level1">
 <h1><span class="header-section-number">2</span> Designing teaching materials</h1>
-<p>Here, I come back to my first experience teaching an advanced R course (R is a programming language with a lot of users in Statistics / Data Science).</p>
+<p>Here, I come back to my experience teaching an advanced R course (R is a programming language with a lot of users in Statistics / Data Science).</p>
 <div id="content" class="section level2">
 <h2><span class="header-section-number">2.1</span> Content</h2>
 <p>I planned this course in 10 sessions (of 3 hours each) for PhD students with some basics in R.</p>
@@ -167,34 +167,33 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="materials" class="section level2">
 <h2><span class="header-section-number">2.2</span> Materials</h2>
-<p>At first, I wanted to do an interactive course using package <a href="https://rstudio.github.io/learnr/">{learnr}</a> but it would have required way too much work (my thesis supervisor would not have been happy!). So, I finally decided to use package <a href="https://bookdown.org/yihui/bookdown/">{bookdown}</a>. Using {bookdown} was really easy, and knowing how to use it now is useful (e.g. this website is made with {bookdown}).</p>
+<p>At first, I wanted to do an interactive course using package <a href="https://rstudio.github.io/learnr/">{learnr}</a> but it would have required way too much work (my thesis supervisor would not have been happy!). So, I finally decided to use package <a href="https://bookdown.org/yihui/bookdown/">{bookdown}</a>. Using {bookdown} was really easy, and knowing how to use it is now useful (e.g. this website is made with {bookdown}).</p>
 <p>Materials are available <a href="https://privefl.github.io/advr38book/index.html">there</a>.</p>
-<p>I also decided to create an associated package for many reasons:</p>
+<p>I also decided to create an associated R package for many reasons:</p>
 <ul>
 <li><p>to make students install package dependencies that we needed in this course,</p></li>
 <li><p>to make data easily available to students,</p></li>
-<li><p>to make solutions available for <a href="https://privefl.github.io/advr38book/performance.html">the chapter on code performance</a>.</p></li>
+<li><p>to make solutions available as functions in the package.</p></li>
 </ul>
 <p>This idea of having a bookdown for materials with an associated package is not new (e.g. see <a href="https://bookdown.org/csgillespie/efficientR/">the <em>Efficient R Programming</em> book</a> and <a href="https://github.com/csgillespie/efficient">its associated package</a>).</p>
-<!-- I also introduced my students to [Slack](https://slack.com) so that we could communicate and share code. -->
-<p>I started bookmarking materials and ideas 6 months before starting the course so that I could present many interesting things, and students could deepen their knowledge on some topics, even if we have time to only scratch the surface in class. I also bookmarked questions that had answered on Stack Overflow. I think these questions make good exercises because they come from real problem that other people have, the questions are short and well designed (with some data and code to reproduce the problem and some expected output), and I have already thought about a solution. <strong>Students were really happy with the materials.</strong></p>
+<p>I started bookmarking materials and ideas 6 months before starting the course so that I could present many interesting things, and students could deepen their knowledge on some topics, even if we didn’t have time to cover everything in class. I also bookmarked some questions I had answered on Stack Overflow. I think these questions make good exercises because they come from real problem that other people have, the questions are short and well designed (with some data and code to reproduce the problem and some expected output), and I have already thought about a solution. <strong>Students were really happy with the materials.</strong></p>
 </div>
 <div id="all-chapters" class="section level2">
 <h2><span class="header-section-number">2.3</span> All chapters</h2>
 <ol style="list-style-type: decimal">
-<li><p>I started the course with <a href="https://privefl.github.io/advr38book/good-practices.html">good practices</a> such as coding style, using RStudio and Git, and getting help.</p></li>
+<li><p>I started the course with <a href="https://privefl.github.io/advr38book/good-practices.html">good practices</a> such as coding style, using RStudio and Git, and getting help. I also introduced my students to <a href="https://slack.com">Slack</a> so that we could communicate and share code.</p></li>
 <li><p>I continued the course with some <a href="https://privefl.github.io/advr38book/r-programming.html">base R programming</a>. This is not the funniest part of the course, but knowing this seemed to me as inevitable to be proficient in R.</p></li>
 <li><p>Then, <a href="https://privefl.github.io/advr38book/tidyverse.html">we learned about the tidyverse</a> using <a href="http://r4ds.had.co.nz/">the R for Data Science book</a>. While teaching this course, I have discovered that many people still don’t use {ggplot2} and {dplyr}, two packages that have been used by many people for more than 10 years. So, I had to introduce these two packages from scratch and it took me longer than I had anticipated. In 3 sessions (9h), I had the time to cover R Markdown, {ggplot2} and {dplyr} only.</p></li>
 <li><p>After the tidyverse, I covered <a href="https://privefl.github.io/advr38book/performance.html">performance of R code</a>. I really like to solve performance problems on Stack Overflow and (I think) I’m really good at it. So, this may have been the chapter I could bring the most to the table. Moreover, one student came with one of the problem she had, and I used her problem as an exercise. At the end, she was able to make her code more than 1000 times faster. For the other exercises, I mainly used problems I had answered on Stack Overflow.</p></li>
-<li><p>For the last chapter, we covered <a href="https://privefl.github.io/advr38book/packages.html">how to make an R package</a>. I showed them that it was really easy and fast, mainly thanks to packages {usethis} and {roxygen2}. We had time to cover the full documentation, testing, automatic checking of packages and even how to make a website of a package.</p></li>
-<li><p>Finally, the last session was a “bonus” session we could use either to spend more time on any topic or just to learn something fun like {Shiny}. Indeed, we could have spent at least two more sessions on the tidyverse and one on practicing about performance of R code. Using a <a href="https://simplepoll.rocks/">Slack poll</a>, we agreed to <a href="https://privefl.github.io/advr38book/shiny.html">learn Shiny</a>. For this, I used <a href="https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny">this nice and free DataCamp course</a>.</p></li>
+<li><p>For the last chapter, we covered <a href="https://privefl.github.io/advr38book/packages.html">how to make an R package</a>. I showed them that it was really easy and fast, mainly thanks to R packages {usethis} and {roxygen2}. We had time to cover the full documentation, testing, automatic checking of packages and even how to make a website of a package.</p></li>
+<li><p>Finally, the last session was a “bonus” session we could have used either to spend more time on any topic or just to learn something fun like {Shiny}. Indeed, we could have spent at least two more sessions on the tidyverse and one on practicing about performance of R code. Using a <a href="https://simplepoll.rocks/">Slack poll</a>, we agreed to <a href="https://privefl.github.io/advr38book/shiny.html">learn Shiny</a>. For this, I used <a href="https://www.datacamp.com/courses/building-web-applications-in-r-with-shiny">this nice and free DataCamp course</a>.</p></li>
 </ol>
 </div>
 <div id="retrospective-thoughts-1" class="section level2">
 <h2><span class="header-section-number">2.4</span> Retrospective thoughts</h2>
 <ol style="list-style-type: decimal">
 <li><p>At least half of the materials I used is borrowed from others. At first, I felt bad about this because I felt lazy. But it has already taken me a lot of time to prepare these materials, just reinventing the wheel with some new materials that were already out there would have not been good for me or my students.</p></li>
-<li><p>I think using {bookdown}, Git and Slack was a good idea. Indeed, using {bookdown} makes the structure of the course very clear. Moreover, other resources that I use are also in this format so that students are already familiar with it. Then, Git is so useful for everything related to code, so even if some students do not get the point of learning Git now, they will thank me later. And, it is really easy to learn Git in RStudio. Finally, Slack was really helpful to do many things such as sharing code or data to help students with their own problems and also to make some polls to choose between options (e.g. choosing what to cover in the last/bonus session).</p></li>
+<li><p>I think using {bookdown}, Git and Slack was a good idea. Indeed, using {bookdown} makes the structure of the course very clear. Moreover, other resources that I use are also in this format so that students are already familiar with it. Then, Git is so useful for everything related to code, so even if some students do not get the point of learning Git now, they will thank me later, especially since it is really easy to use Git with RStudio. Finally, Slack was really helpful to do many things such as sharing code or data to help students with their own problems and also to make some polls to choose between options (e.g. choosing what to cover in the last/bonus session).</p></li>
 </ol>
 <p><img src="poll.png" width="70%" style="display: block; margin: auto;" /></p>
 <ol start="3" style="list-style-type: decimal">
@@ -228,15 +227,15 @@ data_course_country &lt;-<span class="st"> </span><span class="kw">google_analyt
 <h2><span class="header-section-number">2.5</span> New year</h2>
 <p>I’m teaching this course again this year (2019). I was also teaching at ENSIMAG in the meantime, so that it is good that all materials were ready from last year since I would not have time to prepare them again.</p>
 <p>I have updated some small parts of the course, making sure that all code was still running, replacing exercises that were too hard, etc.</p>
-<p>I also decided to plan only 9 sessions in 3 weeks instead of 10 sessions in 5 weeks. Indeed, only one session of packages is sufficient and <strong>students from last year reported that a course over 5 weeks was too long</strong>.</p>
+<p>I also decided to plan only 9 sessions over 3 weeks instead of 10 sessions over 5 weeks as we did last year. Indeed, only one session about packages is sufficient and <strong>students from last year reported that a course over 5 weeks was too long</strong>.</p>
 </div>
 <div id="other-teachings" class="section level2">
 <h2><span class="header-section-number">2.6</span> Other teachings</h2>
 <ul>
-<li><p>courses and practical exercises in Mathematics for first year college students (2 x 64H)</p></li>
+<li><p>courses and practical exercises in Mathematics for students in their first semester after high school (2 x 64H)</p></li>
 <li><p>advanced R course for PhD students (30H + 27H)</p></li>
 <li><p>introductory R course for PhD students (21H)</p></li>
-<li><p>statistical methods for first year engineer students (third year after high school) at ENSIMAG where I got my degree 3 years ago (18H)</p></li>
+<li><p>statistical methods for first year engineer students (third year after high school) at ENSIMAG where I got my engineer degree 3 years ago (18H)</p></li>
 </ul>
 
 </div>
