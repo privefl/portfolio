@@ -193,12 +193,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2><span class="header-section-number">2.4</span> Retrospective thoughts</h2>
 <ol style="list-style-type: decimal">
 <li><p>At least half of the materials I used is borrowed from others. At first, I felt bad about this because I felt lazy. But it has already taken me a lot of time to prepare these materials, just reinventing the wheel with some new materials that were already out there would have not been good for me or my students.</p></li>
-<li><p>I think using {bookdown}, Git and Slack was a good idea. Indeed, using {bookdown} makes the structure of the course very clear. Moreover, other resources that I use are also in this format so that students are already familiar with it. Then, Git is so useful for everything related to code, so even if some students do not get the point of learning Git now, they will thank me later, especially since it is really easy to use Git with RStudio. Finally, Slack was really helpful to do many things such as sharing code or data to help students with their own problems and also to make some polls to choose between options (e.g. choosing what to cover in the last/bonus session).</p></li>
-</ol>
-<p><img src="poll.png" width="70%" style="display: block; margin: auto;" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li>I feel like I have covered lots of useful things. However, I would have wanted my course to be useful for more people (I had only 10-12 students). So, in order to get motivated to make these materials, I designed them to be used by other people anywhere in the world.</li>
-</ol>
+<li><p>I think using {bookdown}, Git and Slack was a good idea. Indeed, using {bookdown} makes the structure of the course very clear. Moreover, other resources that I use are also in this format so that students are already familiar with it. Then, Git is so useful for everything related to code, so even if some students do not get the point of learning Git now, they will thank me later, especially since it is really easy to use Git with RStudio. Finally, Slack was really helpful to do many things such as sharing code or data to help students with their own problems and also to make some polls to choose between options (e.g. choosing what to cover in the last/bonus session).</p>
+<p><img src="poll.png" width="70%" style="display: block; margin: auto;" /></p></li>
+<li><p>I feel like I have covered lots of useful things. However, I would have wanted my course to be useful for more people (I had only 10-12 students). So, in order to get motivated to make these materials, I designed them to be used by other people anywhere in the world.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
 <span class="kw">library</span>(googleAnalyticsR)
 <span class="kw">ga_auth</span>(<span class="st">&quot;.httr-oauth&quot;</span>)
@@ -210,7 +207,7 @@ data_course_country &lt;-<span class="st"> </span><span class="kw">google_analyt
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )
 <span class="kw">sum</span>(data_course_country<span class="op">$</span>sessions)</code></pre></div>
-<pre><code>#&gt; [1] 4016</code></pre>
+<pre><code>#&gt; [1] 4027</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_course_country <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">country2 =</span> <span class="kw">ifelse</span>(sessions <span class="op">&lt;</span><span class="st"> </span><span class="dv">30</span>, <span class="ot">NA</span>, country)) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">reorder</span>(country2, <span class="kw">desc</span>(sessions)), sessions)) <span class="op">+</span>
@@ -221,7 +218,8 @@ data_course_country &lt;-<span class="st"> </span><span class="kw">google_analyt
 <span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Country&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Number of sessions&quot;</span>, 
        <span class="dt">title =</span> <span class="st">&quot;Number of sessions by country&quot;</span>)</code></pre></div>
 <pre><code>#&gt; Warning: Removed 73 rows containing missing values (position_stack).</code></pre>
-<p><img src="teaching_files/figure-html/unnamed-chunk-2-1.svg" width="92%" style="display: block; margin: auto;" /></p>
+<p><img src="teaching_files/figure-html/unnamed-chunk-2-1.svg" width="92%" style="display: block; margin: auto;" /></p></li>
+</ol>
 </div>
 <div id="new-year" class="section level2">
 <h2><span class="header-section-number">2.5</span> New year</h2>

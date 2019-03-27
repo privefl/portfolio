@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 # Developing an international network
 
 
@@ -60,13 +65,13 @@ More and more people are coming to by blog:
 data_blog <- google_analytics(
   viewId = "152155542",
   date_range = ymd("2016-10-01", Sys.Date()),
-  dimensions = c("date"),  # , "pagePath", "hour", "medium"
-  metrics = c("sessions")  # , "pageviews"
+  dimensions = "date",
+  metrics = "sessions"
 )
 ```
 
 ```
-#> 2019-03-26 10:37:50> Downloaded [907] rows from a total of [907].
+#> 2019-03-27 11:15:30> Downloaded [908] rows from a total of [908].
 ```
 
 ```r
@@ -81,6 +86,26 @@ qplot(y = cumsum(data_blog$sessions)) +
 
 <img src="network_files/figure-html/unnamed-chunk-2-1.svg" width="80%" style="display: block; margin: auto;" />
 
+```r
+google_analytics(
+  viewId = "152155542",
+  date_range = ymd("2017-06-04", Sys.Date()),
+  metrics = "avgSessionDuration"
+)
+```
+
+```
+#> 2019-03-27 11:15:32> Downloaded [1] rows from a total of [1].
+```
+
+<div class="kable-table">
+
+| avgSessionDuration|
+|------------------:|
+|           37.16615|
+
+</div>
+
 
 ### GitHub
 
@@ -88,7 +113,7 @@ GitHub is a platform where you can put your code. GitHub is a good way to make y
 
 ### Twitter, an important tool for work
 
-I also try to be visible on Twitter, which is used by both communities that are of interest for me to communicate about new stuff.
+I also try to be visible on Twitter, which is used by both communities that are of interest for me to communicate about new stuff. For example, look at [this article in Nature](https://www.nature.com/articles/d41586-019-00535-w) "How to use Twitter to further your research career" and [this blog post](https://academicpositions.com/career-advice/why-academics-should-use-twitter) "Why Academics Should Use Twitter".
 
 To convince you, two tweets about my R course:
 
@@ -112,7 +137,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2019-03-26 10:37:52> Downloaded [372] rows from a total of [372].
+#> 2019-03-27 11:15:33> Downloaded [373] rows from a total of [373].
 ```
 
 ```r
@@ -160,9 +185,9 @@ Memory- and Computation-Efficient Tools for Big Matrices. [[Recording]](https://
 
 ### A local network
 
-Finally, in addition to taking part in an international community, I think it's very important to take part in a more local community. That's one reason why I launched the initiative to make an R community in Grenoble, which started to be active in September 2017 (https://r-in-grenoble.github.io/).
+Finally, in addition to taking part in an international community, I think it's very important to take part in a more local community. That's one reason why I launched the initiative to make an R community in Grenoble, which started to be active in September 2017. Learn more about how we organize this R group by looking at [its website](https://r-in-grenoble.github.io/).
 
-I'm also an active member in the French community; we have been [gathering on Slack](https://join.slack.com/t/r-grrr/shared_invite/enQtMzI4MzgwNTc4OTAxLWZlOGZiZTBiMWU0NDQ3OTYzOGE1YThiODgwZWNhNWEyYjI4ZDJiNmNhY2YyYWI5YzFiOTFkNDYxYzkwODUwNWM).
+I'm also an active member in the French community; we have been [gathering on Slack](https://join.slack.com/t/r-grrr/shared_invite/enQtMzI4MzgwNTc4OTAxLWZlOGZiZTBiMWU0NDQ3OTYzOGE1YThiODgwZWNhNWEyYjI4ZDJiNmNhY2YyYWI5YzFiOTFkNDYxYzkwODUwNWM), with 450+ members.
 
 <!-- ## What's make people be interested in me? -->
 

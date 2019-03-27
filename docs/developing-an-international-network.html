@@ -218,10 +218,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_blog &lt;-<span class="st"> </span><span class="kw">google_analytics</span>(
   <span class="dt">viewId =</span> <span class="st">&quot;152155542&quot;</span>,
   <span class="dt">date_range =</span> <span class="kw">ymd</span>(<span class="st">&quot;2016-10-01&quot;</span>, <span class="kw">Sys.Date</span>()),
-  <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
-  <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
+  <span class="dt">dimensions =</span> <span class="st">&quot;date&quot;</span>,
+  <span class="dt">metrics =</span> <span class="st">&quot;sessions&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-26 10:37:50&gt; Downloaded [907] rows from a total of [907].</code></pre>
+<pre><code>#&gt; 2019-03-27 11:15:30&gt; Downloaded [908] rows from a total of [908].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># No data from Google Analytics before this date</span>
 ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<span class="op">$</span>date <span class="op">==</span><span class="st"> &quot;2017-06-04&quot;</span>)
 
@@ -230,6 +230,26 @@ ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<s
 <span class="st">  </span>bigstatsr<span class="op">::</span><span class="kw">theme_bigstatsr</span>() <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Day of blogging&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Cumulative numbers of session on my blog&quot;</span>)</code></pre></div>
 <p><img src="network_files/figure-html/unnamed-chunk-2-1.svg" width="80%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">google_analytics</span>(
+  <span class="dt">viewId =</span> <span class="st">&quot;152155542&quot;</span>,
+  <span class="dt">date_range =</span> <span class="kw">ymd</span>(<span class="st">&quot;2017-06-04&quot;</span>, <span class="kw">Sys.Date</span>()),
+  <span class="dt">metrics =</span> <span class="st">&quot;avgSessionDuration&quot;</span>
+)</code></pre></div>
+<pre><code>#&gt; 2019-03-27 11:15:32&gt; Downloaded [1] rows from a total of [1].</code></pre>
+<div class="kable-table">
+<table>
+<thead>
+<tr class="header">
+<th align="right">avgSessionDuration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">37.16615</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="github" class="section level3">
 <h3><span class="header-section-number">1.2.3</span> GitHub</h3>
@@ -237,7 +257,7 @@ ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<s
 </div>
 <div id="twitter-an-important-tool-for-work" class="section level3">
 <h3><span class="header-section-number">1.2.4</span> Twitter, an important tool for work</h3>
-<p>I also try to be visible on Twitter, which is used by both communities that are of interest for me to communicate about new stuff.</p>
+<p>I also try to be visible on Twitter, which is used by both communities that are of interest for me to communicate about new stuff. For example, look at <a href="https://www.nature.com/articles/d41586-019-00535-w">this article in Nature</a> “How to use Twitter to further your research career” and <a href="https://academicpositions.com/career-advice/why-academics-should-use-twitter">this blog post</a> “Why Academics Should Use Twitter”.</p>
 <p>To convince you, two tweets about my R course:</p>
 <blockquote class="twitter-tweet" data-lang="en" align="center">
 <p lang="en" dir="ltr">
@@ -260,7 +280,7 @@ If you are at the airport today waiting for your ✈️, here's something good t
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-26 10:37:52&gt; Downloaded [372] rows from a total of [372].</code></pre>
+<pre><code>#&gt; 2019-03-27 11:15:33&gt; Downloaded [373] rows from a total of [373].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(data_course) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="kw">ymd</span>(<span class="st">&quot;2018-03-30&quot;</span>, <span class="st">&quot;2018-05-17&quot;</span>), 
              <span class="dt">linetype =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span>
@@ -300,8 +320,8 @@ Back in 🇫🇷. I had a great time in 🇩🇰 meeting <a href="https://twitte
 </div>
 <div id="a-local-network" class="section level3">
 <h3><span class="header-section-number">1.2.6</span> A local network</h3>
-<p>Finally, in addition to taking part in an international community, I think it’s very important to take part in a more local community. That’s one reason why I launched the initiative to make an R community in Grenoble, which started to be active in September 2017 (<a href="https://r-in-grenoble.github.io/" class="uri">https://r-in-grenoble.github.io/</a>).</p>
-<p>I’m also an active member in the French community; we have been <a href="https://join.slack.com/t/r-grrr/shared_invite/enQtMzI4MzgwNTc4OTAxLWZlOGZiZTBiMWU0NDQ3OTYzOGE1YThiODgwZWNhNWEyYjI4ZDJiNmNhY2YyYWI5YzFiOTFkNDYxYzkwODUwNWM">gathering on Slack</a>.</p>
+<p>Finally, in addition to taking part in an international community, I think it’s very important to take part in a more local community. That’s one reason why I launched the initiative to make an R community in Grenoble, which started to be active in September 2017. Learn more about how we organize this R group by looking at <a href="https://r-in-grenoble.github.io/">its website</a>.</p>
+<p>I’m also an active member in the French community; we have been <a href="https://join.slack.com/t/r-grrr/shared_invite/enQtMzI4MzgwNTc4OTAxLWZlOGZiZTBiMWU0NDQ3OTYzOGE1YThiODgwZWNhNWEyYjI4ZDJiNmNhY2YyYWI5YzFiOTFkNDYxYzkwODUwNWM">gathering on Slack</a>, with 450+ members.</p>
 <!-- ## What's make people be interested in me? -->
 <!-- Is this my blog posts? the conferences I attend? or the paper I wrote? -->
 <!-- ```{r} -->

@@ -63,47 +63,47 @@ Using a [Slack poll](https://simplepoll.rocks/), we agreed to [learn Shiny](http
 
 2. I think using {bookdown}, Git and Slack was a good idea. Indeed, using {bookdown} makes the structure of the course very clear. Moreover, other resources that I use are also in this format so that students are already familiar with it. Then, Git is so useful for everything related to code, so even if some students do not get the point of learning Git now, they will thank me later, especially since it is really easy to use Git with RStudio. Finally, Slack was really helpful to do many things such as sharing code or data to help students with their own problems and also to make some polls to choose between options (e.g. choosing what to cover in the last/bonus session).
 
-<img src="poll.png" width="70%" style="display: block; margin: auto;" />
+    <img src="poll.png" width="70%" style="display: block; margin: auto;" />
 
 
 3. I feel like I have covered lots of useful things. However, I would have wanted my course to be useful for more people (I had only 10-12 students). So, in order to get motivated to make these materials, I designed them to be used by other people anywhere in the world.
 
-
-```r
-library(tidyverse)
-library(googleAnalyticsR)
-ga_auth(".httr-oauth")
-
-data_course_country <- google_analytics(
-  viewId = "172000044",
-  date_range = lubridate::ymd("2018-03-20", Sys.Date()),
-  dimensions = c("country"),  # , "pagePath", "hour", "medium"
-  metrics = c("sessions")  # , "pageviews"
-)
-sum(data_course_country$sessions)
-```
-
-```
-#> [1] 4016
-```
-
-```r
-data_course_country %>%
-  mutate(country2 = ifelse(sessions < 30, NA, country)) %>%
-  ggplot(aes(reorder(country2, desc(sessions)), sessions)) +
-  geom_col() + 
-  scale_x_discrete(na.translate = FALSE) +
-  bigstatsr::theme_bigstatsr() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
-  labs(x = "Country", y = "Number of sessions", 
-       title = "Number of sessions by country")
-```
-
-```
-#> Warning: Removed 73 rows containing missing values (position_stack).
-```
-
-<img src="teaching_files/figure-html/unnamed-chunk-2-1.svg" width="92%" style="display: block; margin: auto;" />
+    
+    ```r
+    library(tidyverse)
+    library(googleAnalyticsR)
+    ga_auth(".httr-oauth")
+    
+    data_course_country <- google_analytics(
+      viewId = "172000044",
+      date_range = lubridate::ymd("2018-03-20", Sys.Date()),
+      dimensions = c("country"),  # , "pagePath", "hour", "medium"
+      metrics = c("sessions")  # , "pageviews"
+    )
+    sum(data_course_country$sessions)
+    ```
+    
+    ```
+    #> [1] 4027
+    ```
+    
+    ```r
+    data_course_country %>%
+      mutate(country2 = ifelse(sessions < 30, NA, country)) %>%
+      ggplot(aes(reorder(country2, desc(sessions)), sessions)) +
+      geom_col() + 
+      scale_x_discrete(na.translate = FALSE) +
+      bigstatsr::theme_bigstatsr() +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1)) + 
+      labs(x = "Country", y = "Number of sessions", 
+           title = "Number of sessions by country")
+    ```
+    
+    ```
+    #> Warning: Removed 73 rows containing missing values (position_stack).
+    ```
+    
+    <img src="teaching_files/figure-html/unnamed-chunk-2-1.svg" width="92%" style="display: block; margin: auto;" />
 
 ## New year
 
