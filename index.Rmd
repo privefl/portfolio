@@ -14,6 +14,7 @@ url: 'https\://privefl.github.io/portfolio/'
 
 ```{r setup, include=FALSE}
 source("knitr-options.R")
+WORDS_TO_IGNORE <- c("CNRS", "Blum", "Privé's")
 source("spelling-check.R")
 ```
 
@@ -29,7 +30,29 @@ In this portfolio, I show 3 competences that I'm developing:
 
 1. Developing an expertise in Data Science
 
-The goal is to have skills whatever I want to do next, that is to say leaving academia or staying in Research. 
+The goal is to have skills whatever I want to do next, that is working in a company or staying in Research and Academia.
+
+## External point of view {-}
+
+> I have read Florian Privé's portfolio and once again I have been
+impressed by his achievements during his thesis. Florian was mature
+enough to think about how he could develop his international network. He
+has his own blog, website, he has his personal github webpage as well as
+an active Twitter and Stack Overflow account. He has been very active on
+social networks and has now connections all around the world, which can
+be useful whatever his next career move.
+>
+> Florian has also designed an original teaching material online to
+provide teaching about R, which is a statistical software. He started a
+new course from scratch, and collected materials online. He has been
+able to publish an original online advanced course about R that students
+can use to learn the R software. If Florian wants to be involved in
+teaching later in his career, he will build upon this previous
+experience of designing an online course.
+>
+> Feel free to [contact me](mailto:michael.blum@univ-grenoble-alpes.fr) if you have any questions about Florian.
+>
+> -- Michael Blum, CNRS Director of Research.
 
 ## About {-}
 

@@ -107,7 +107,7 @@ I have updated some small parts of the course, making sure that all code was sti
 
 I also decided to plan only 9 sessions over 3 weeks instead of 10 sessions over 5 weeks as we did last year. Indeed, only one session about packages is sufficient and **students from last year reported that a course over 5 weeks was too long**.
 
-## Other teachings
+## All teachings
 
 - courses and practical exercises in Mathematics for students in their first semester after high school (2 x 64H)
 
@@ -116,3 +116,5 @@ I also decided to plan only 9 sessions over 3 weeks instead of 10 sessions over 
 - introductory R course for PhD students (21H)
 
 - statistical methods for first year engineer students (third year after high school) at ENSIMAG where I got my engineer degree 3 years ago (18H)
+
+- software carpentry instructor (7H)
