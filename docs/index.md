@@ -2,7 +2,7 @@
 title: "My portfolio"
 subtitle: "Produced through label RES"
 author: "Florian Privé"
-date: "2019-03-28"
+date: "2019-03-29"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]

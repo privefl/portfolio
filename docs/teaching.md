@@ -84,7 +84,7 @@ Using a [Slack poll](https://simplepoll.rocks/), we agreed to [learn Shiny](http
     ```
     
     ```
-    #> [1] 4050
+    #> [1] 4067
     ```
     
     ```r

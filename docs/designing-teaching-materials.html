@@ -25,7 +25,7 @@
 <meta name="author" content="Florian Privé">
 
 
-<meta name="date" content="2019-03-26">
+<meta name="date" content="2019-03-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -106,6 +106,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#external-point-of-view"><i class="fa fa-check"></i>External point of view</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#about"><i class="fa fa-check"></i>About</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html"><i class="fa fa-check"></i><b>1</b> Developing an international network</a><ul>
@@ -127,7 +128,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#all-chapters"><i class="fa fa-check"></i><b>2.3</b> All chapters</a></li>
 <li class="chapter" data-level="2.4" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#retrospective-thoughts-1"><i class="fa fa-check"></i><b>2.4</b> Retrospective thoughts</a></li>
 <li class="chapter" data-level="2.5" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#new-year"><i class="fa fa-check"></i><b>2.5</b> New year</a></li>
-<li class="chapter" data-level="2.6" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#other-teachings"><i class="fa fa-check"></i><b>2.6</b> Other teachings</a></li>
+<li class="chapter" data-level="2.6" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#all-teachings"><i class="fa fa-check"></i><b>2.6</b> All teachings</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="developing-an-expertise-in-data-science.html"><a href="developing-an-expertise-in-data-science.html"><i class="fa fa-check"></i><b>3</b> Developing an expertise in Data Science</a></li>
 <li class="divider"></li>
@@ -207,7 +208,7 @@ data_course_country &lt;-<span class="st"> </span><span class="kw">google_analyt
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )
 <span class="kw">sum</span>(data_course_country<span class="op">$</span>sessions)</code></pre></div>
-<pre><code>#&gt; [1] 4027</code></pre>
+<pre><code>#&gt; [1] 4067</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">data_course_country <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">country2 =</span> <span class="kw">ifelse</span>(sessions <span class="op">&lt;</span><span class="st"> </span><span class="dv">30</span>, <span class="ot">NA</span>, country)) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">reorder</span>(country2, <span class="kw">desc</span>(sessions)), sessions)) <span class="op">+</span>
@@ -227,13 +228,14 @@ data_course_country &lt;-<span class="st"> </span><span class="kw">google_analyt
 <p>I have updated some small parts of the course, making sure that all code was still running, replacing exercises that were too hard, etc.</p>
 <p>I also decided to plan only 9 sessions over 3 weeks instead of 10 sessions over 5 weeks as we did last year. Indeed, only one session about packages is sufficient and <strong>students from last year reported that a course over 5 weeks was too long</strong>.</p>
 </div>
-<div id="other-teachings" class="section level2">
-<h2><span class="header-section-number">2.6</span> Other teachings</h2>
+<div id="all-teachings" class="section level2">
+<h2><span class="header-section-number">2.6</span> All teachings</h2>
 <ul>
 <li><p>courses and practical exercises in Mathematics for students in their first semester after high school (2 x 64H)</p></li>
 <li><p>advanced R course for PhD students (30H + 27H)</p></li>
 <li><p>introductory R course for PhD students (21H)</p></li>
 <li><p>statistical methods for first year engineer students (third year after high school) at ENSIMAG where I got my engineer degree 3 years ago (18H)</p></li>
+<li><p>software carpentry instructor (7H)</p></li>
 </ul>
 
 </div>

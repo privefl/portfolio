@@ -25,7 +25,7 @@
 <meta name="author" content="Florian Privé">
 
 
-<meta name="date" content="2019-03-26">
+<meta name="date" content="2019-03-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -106,6 +106,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#external-point-of-view"><i class="fa fa-check"></i>External point of view</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#about"><i class="fa fa-check"></i>About</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="developing-an-international-network.html"><a href="developing-an-international-network.html"><i class="fa fa-check"></i><b>1</b> Developing an international network</a><ul>
@@ -127,7 +128,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="2.3" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#all-chapters"><i class="fa fa-check"></i><b>2.3</b> All chapters</a></li>
 <li class="chapter" data-level="2.4" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#retrospective-thoughts-1"><i class="fa fa-check"></i><b>2.4</b> Retrospective thoughts</a></li>
 <li class="chapter" data-level="2.5" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#new-year"><i class="fa fa-check"></i><b>2.5</b> New year</a></li>
-<li class="chapter" data-level="2.6" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#other-teachings"><i class="fa fa-check"></i><b>2.6</b> Other teachings</a></li>
+<li class="chapter" data-level="2.6" data-path="designing-teaching-materials.html"><a href="designing-teaching-materials.html#all-teachings"><i class="fa fa-check"></i><b>2.6</b> All teachings</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="developing-an-expertise-in-data-science.html"><a href="developing-an-expertise-in-data-science.html"><i class="fa fa-check"></i><b>3</b> Developing an expertise in Data Science</a></li>
 <li class="divider"></li>
@@ -221,7 +222,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
   <span class="dt">dimensions =</span> <span class="st">&quot;date&quot;</span>,
   <span class="dt">metrics =</span> <span class="st">&quot;sessions&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-27 11:15:30&gt; Downloaded [908] rows from a total of [908].</code></pre>
+<pre><code>#&gt; 2019-03-29 09:04:18&gt; Downloaded [910] rows from a total of [910].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># No data from Google Analytics before this date</span>
 ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<span class="op">$</span>date <span class="op">==</span><span class="st"> &quot;2017-06-04&quot;</span>)
 
@@ -235,7 +236,7 @@ ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<s
   <span class="dt">date_range =</span> <span class="kw">ymd</span>(<span class="st">&quot;2017-06-04&quot;</span>, <span class="kw">Sys.Date</span>()),
   <span class="dt">metrics =</span> <span class="st">&quot;avgSessionDuration&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-27 11:15:32&gt; Downloaded [1] rows from a total of [1].</code></pre>
+<pre><code>#&gt; 2019-03-29 09:04:20&gt; Downloaded [1] rows from a total of [1].</code></pre>
 <div class="kable-table">
 <table>
 <thead>
@@ -245,7 +246,7 @@ ga_begin &lt;-<span class="st"> </span><span class="kw">which</span>(data_blog<s
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right">37.16615</td>
+<td align="right">37.00312</td>
 </tr>
 </tbody>
 </table>
@@ -280,7 +281,7 @@ If you are at the airport today waiting for your ✈️, here's something good t
   <span class="dt">dimensions =</span> <span class="kw">c</span>(<span class="st">&quot;date&quot;</span>),  <span class="co"># , &quot;pagePath&quot;, &quot;hour&quot;, &quot;medium&quot;</span>
   <span class="dt">metrics =</span> <span class="kw">c</span>(<span class="st">&quot;sessions&quot;</span>)  <span class="co"># , &quot;pageviews&quot;</span>
 )</code></pre></div>
-<pre><code>#&gt; 2019-03-27 11:15:33&gt; Downloaded [373] rows from a total of [373].</code></pre>
+<pre><code>#&gt; 2019-03-29 09:04:21&gt; Downloaded [375] rows from a total of [375].</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(data_course) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="kw">ymd</span>(<span class="st">&quot;2018-03-30&quot;</span>, <span class="st">&quot;2018-05-17&quot;</span>), 
              <span class="dt">linetype =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span><span class="st"> </span>

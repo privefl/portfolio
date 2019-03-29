@@ -71,7 +71,7 @@ data_blog <- google_analytics(
 ```
 
 ```
-#> 2019-03-28 10:44:09> Downloaded [909] rows from a total of [909].
+#> 2019-03-29 09:04:18> Downloaded [910] rows from a total of [910].
 ```
 
 ```r
@@ -95,14 +95,14 @@ google_analytics(
 ```
 
 ```
-#> 2019-03-28 10:44:11> Downloaded [1] rows from a total of [1].
+#> 2019-03-29 09:04:20> Downloaded [1] rows from a total of [1].
 ```
 
 <div class="kable-table">
 
 | avgSessionDuration|
 |------------------:|
-|            37.0847|
+|           37.00312|
 
 </div>
 
@@ -137,7 +137,7 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2019-03-28 10:44:13> Downloaded [374] rows from a total of [374].
+#> 2019-03-29 09:04:21> Downloaded [375] rows from a total of [375].
 ```
 
 ```r
