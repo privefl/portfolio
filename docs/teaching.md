@@ -84,7 +84,7 @@ Using a [Slack poll](https://simplepoll.rocks/), we agreed to [learn Shiny](http
     ```
     
     ```
-    #> [1] 4067
+    #> [1] 4516
     ```
     
     ```r
@@ -100,7 +100,7 @@ Using a [Slack poll](https://simplepoll.rocks/), we agreed to [learn Shiny](http
     ```
     
     ```
-    #> Warning: Removed 73 rows containing missing values (position_stack).
+    #> Warning: Removed 75 rows containing missing values (position_stack).
     ```
     
     <img src="teaching_files/figure-html/unnamed-chunk-2-1.svg" width="92%" style="display: block; margin: auto;" />
@@ -114,6 +114,10 @@ I have updated some small parts of the course, making sure that all code was sti
 
 I also decided to plan only 9 sessions over 3 weeks instead of 10 sessions over 5 weeks as we did last year. Indeed, only one session about packages is sufficient and **students from last year reported that a course over 5 weeks was too long**.
 
+<blockquote class="twitter-tweet" data-lang="en" align="center"><p lang="en" dir="ltr">Finished teaching my advanced <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> course for PhD students for the 2nd year 💪<br><br>Contents:<br>- good practices and rprog<br>- <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a><br>- performance ⚡️<br>- packages 📦<br>- <a href="https://twitter.com/hashtag/shiny?src=hash&amp;ref_src=twsrc%5Etfw">#shiny</a><br><br>Materials always available as an online <a href="https://twitter.com/hashtag/bookdown?src=hash&amp;ref_src=twsrc%5Etfw">#bookdown</a>:<a href="https://t.co/Ph0yNo6X93">https://t.co/Ph0yNo6X93</a></p>&mdash; Florian Privé (@privefl) <a href="https://twitter.com/privefl/status/1112999031301685249?ref_src=twsrc%5Etfw">2 avril 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 ## All teachings
 
 - courses and practical exercises in Mathematics for students in their first semester after high school (2 x 64H)
@@ -125,3 +129,4 @@ I also decided to plan only 9 sessions over 3 weeks instead of 10 sessions over 
 - statistical methods for first year engineer students (third year after high school) at ENSIMAG where I got my engineer degree 3 years ago (18H)
 
 - software carpentry instructor (7H)
+
