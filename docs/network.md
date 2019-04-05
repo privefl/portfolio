@@ -71,7 +71,7 @@ data_blog <- google_analytics(
 ```
 
 ```
-#> 2019-03-29 09:04:18> Downloaded [910] rows from a total of [910].
+#> 2019-04-05 09:33:17> Downloaded [917] rows from a total of [917].
 ```
 
 ```r
@@ -87,7 +87,7 @@ qplot(y = cumsum(data_blog$sessions)) +
 <img src="network_files/figure-html/unnamed-chunk-2-1.svg" width="80%" style="display: block; margin: auto;" />
 
 ```r
-google_analytics(
+avg_time <- google_analytics(
   viewId = "152155542",
   date_range = ymd("2017-06-04", Sys.Date()),
   metrics = "avgSessionDuration"
@@ -95,16 +95,16 @@ google_analytics(
 ```
 
 ```
-#> 2019-03-29 09:04:20> Downloaded [1] rows from a total of [1].
+#> 2019-04-05 09:33:19> Downloaded [1] rows from a total of [1].
 ```
 
-<div class="kable-table">
+```r
+cat("The average time for each session is", avg_time[[1]], "seconds.\n")
+```
 
-| avgSessionDuration|
-|------------------:|
-|           37.00312|
-
-</div>
+```
+#> The average time for each session is 36.77148 seconds.
+```
 
 
 ### GitHub
@@ -115,13 +115,15 @@ GitHub is a platform where you can put your code. GitHub is a good way to make y
 
 I also try to be visible on Twitter, which is used by both communities that are of interest for me to communicate about new stuff. For example, look at [this article in Nature](https://www.nature.com/articles/d41586-019-00535-w) "How to use Twitter to further your research career" and [this blog post](https://academicpositions.com/career-advice/why-academics-should-use-twitter) "Why Academics Should Use Twitter".
 
-To convince you, two tweets about my R course:
+To convince you, these are three tweets about my R course (topic of the next chapter):
 
 <blockquote class="twitter-tweet" data-lang="en" align="center"><p lang="en" dir="ltr">Teaching an advanced R course <a href="https://t.co/2pMG2FWcPs">https://t.co/2pMG2FWcPs</a> <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a></p>&mdash; R-bloggers (@Rbloggers) <a href="https://twitter.com/Rbloggers/status/979539984679161857?ref_src=twsrc%5Etfw">30 mars 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-
 <blockquote class="twitter-tweet" data-lang="en" align="center"><p lang="en" dir="ltr">If you are at the airport today waiting for your ✈️, here&#39;s something good to read: <br>&quot;Advanced <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> Course&quot; by <a href="https://twitter.com/privefl?ref_src=twsrc%5Etfw">@privefl</a>  <a href="https://t.co/JXKBI5lON2">https://t.co/JXKBI5lON2</a></p>&mdash; Colin Fay (@_ColinFay) <a href="https://twitter.com/_ColinFay/status/997073282905067520?ref_src=twsrc%5Etfw">17 mai 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<blockquote class="twitter-tweet" data-lang="en" align="center"><p lang="en" dir="ltr">Finished teaching my advanced <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> course for PhD students for the 2nd year 💪<br><br>Contents:<br>- good practices and rprog<br>- <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a><br>- performance ⚡️<br>- packages 📦<br>- <a href="https://twitter.com/hashtag/shiny?src=hash&amp;ref_src=twsrc%5Etfw">#shiny</a><br><br>Materials always available as an online <a href="https://twitter.com/hashtag/bookdown?src=hash&amp;ref_src=twsrc%5Etfw">#bookdown</a>:<a href="https://t.co/Ph0yNo6X93">https://t.co/Ph0yNo6X93</a></p>&mdash; Florian Privé (@privefl) <a href="https://twitter.com/privefl/status/1112999031301685249?ref_src=twsrc%5Etfw">2 avril 2019</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 In parallel, let's plot the number of visitors of my course:
@@ -137,12 +139,12 @@ data_course <- google_analytics(
 ```
 
 ```
-#> 2019-03-29 09:04:21> Downloaded [375] rows from a total of [375].
+#> 2019-04-05 09:33:20> Downloaded [382] rows from a total of [382].
 ```
 
 ```r
 ggplot(data_course) + 
-  geom_vline(xintercept = ymd("2018-03-30", "2018-05-17"), 
+  geom_vline(xintercept = ymd("2018-03-30", "2018-05-17", "2019-04-02"), 
              linetype = 2, color = "red") + 
   geom_point(aes(date, sessions)) + 
   bigstatsr::theme_bigstatsr()
@@ -150,7 +152,7 @@ ggplot(data_course) +
 
 <img src="network_files/figure-html/unnamed-chunk-3-1.svg" width="80%" style="display: block; margin: auto;" />
 
-Here, you can clearly see two peaks of visit of [my advanced R course](https://privefl.github.io/advr38book/), one when I blogged about it, which was relayed by [R-bloggers](https://twitter.com/Rbloggers) (59K followers at the time), and the other peak when [Colin Fay](https://twitter.com/_colinfay) (4600+ followers) tweeted about it.
+Here, you can clearly see three peaks of visits of [my advanced R course](https://privefl.github.io/advr38book/), one when I blogged about it, which was relayed by [R-bloggers](https://twitter.com/Rbloggers) (59K followers at the time), one other peak when [Colin Fay](https://twitter.com/_colinfay) (4600+ followers) tweeted about it, and the last peak when I tweeted about it after having finished teaching it for the second year.
 
 ### Attending conferences
 
